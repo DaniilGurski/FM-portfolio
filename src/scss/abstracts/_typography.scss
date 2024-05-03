@@ -1,0 +1,42 @@
+@use "sizes" as *;
+@use "functions" as *;
+
+// font families
+$font-family-heading: "Ibarra", "serif";
+$font-family-body:  "PublicSans", "sans-serif";
+
+// font weight
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+// typography
+$type: (
+    typescale: (
+        small: (
+            600: rem(40),       // h1
+            500: rem(40),       // h2
+            400: rem(32),       // h3
+            300: rem(16),       // body 1
+            200: rem(15),       // body 2
+            100: rem(12)        // small
+        ),
+        large: (
+            600: rem(50)
+        )
+    )
+);
+
+// variables
+$font-size-600: var(--fs-600);
+$font-size-500: var(--fs-500);
+$font-size-400: var(--fs-400);
+$font-size-300: var(--fs-300);
+$font-size-200: var(--fs-200);
+$font-size-100: var(--fs-100);
+
+$font-size-h1: $font-size-600;
+$font-size-h2: $font-size-500;
+$font-size-h3: $font-size-400;
+$font-size-body1: $font-size-300;
+$font-size-body2: $font-size-200;
+$font-size-small: $font-size-100;

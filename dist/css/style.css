@@ -1,0 +1,303 @@
+/* box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure {
+  margin: 0;
+}
+
+/* remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* set core root defaults */
+html {
+  height: 100%;
+}
+html:focus-visible {
+  scroll-behavior: smooth;
+}
+
+/* set core body defaults */
+body {
+  height: 100%;
+  text-rendering: optimizeSpeed;
+}
+
+/* reset default link styles */
+a {
+  text-decoration: auto;
+  color: inherit;
+}
+
+/* make images easier to work with  */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* remove default heading styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: inherit;
+}
+
+/* larger line height for paragraphs */
+p {
+  line-height: 1.5;
+}
+
+/* container */
+.container {
+  width: min(90%, 120rem);
+  padding-inline: 1rem;
+  margin-inline: auto;
+}
+
+/* appearence utilities */
+.none {
+  display: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* color utilities */
+.clr-accent {
+  color: var(--clr-primary-500);
+}
+
+.clr-error {
+  color: var(--clr-secondary-500);
+}
+
+/* layout utilities */
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+/* font face */
+/* Ibarra */
+@font-face {
+  font-family: "Ibarra";
+  src: url("/fonts/IbarraReal/IbarraRealNova-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Ibarra";
+  src: url("/fonts/IbarraReal/IbarraRealNova-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+/* Public Sans */
+@font-face {
+  font-family: "PublicSans";
+  src: url("/fonts/PublicSans/PublicSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "PublicSans";
+  src: url("/fonts/PublicSans/PublicSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+/* global variables */
+:root {
+  --clr-primary-800: hsl(205, 41%, 21%);
+  --clr-primary-700: hsl(245, 10%, 22%);
+  --clr-primary-500: hsl(167, 36%, 54%);
+  --clr-secondary-500: hsl(0, 90%, 57%);
+  --clr-secondary-400: hsl(240, 2%, 90%);
+  --clr-secondary-100: hsl(0, 0%, 98%);
+  --fs-600: 2.5rem;
+  --fs-500: 2.5rem;
+  --fs-400: 2rem;
+  --fs-300: 1rem;
+  --fs-200: 0.9375rem;
+  --fs-100: 0.75rem;
+}
+@media (min-width: 0em) {
+  :root {
+    --fs-600: 3.125rem;
+  }
+}
+
+/* general */
+body {
+  font-family: "PublicSans", "sans-serif";
+  background-color: var(--clr-secondary-100);
+  color: var(--clr-primary-700);
+}
+
+/* buttons */
+.button {
+  --_button-bg-color: var(--button-bg-color, var(--clr-primary-800));
+  --_indicator-bg-color: var(--indicator-bg-color, hsl(205, 41%, 18%));
+  display: flex;
+  align-items: center;
+  width: min(80%, 12.5rem);
+  padding: 0;
+  background-color: var(--button-bg-color, var(--clr-primary-800));
+  color: var(--clr-secondary-100);
+  cursor: pointer;
+  border: 1px solid transparent;
+  letter-spacing: 0.125em;
+  /* make hover icon white if button is hovered or disabled */
+}
+.button--secondary {
+  justify-content: center;
+  padding: 1.125rem;
+  color: currentColor;
+  background: none;
+  border: 1px solid currentColor;
+}
+.button--secondary:hover:not(:disabled) {
+  background-color: var(--clr-primary-800);
+  color: var(--clr-secondary-100);
+  border-color: transparent;
+}
+.button--secondary:disabled {
+  color: hsl(200, 11%, 84%);
+}
+.button:hover {
+  --button-bg-color: var(--clr-primary-500);
+  --indicator-bg-color: hsl(167, 36%, 49%);
+}
+.button:focus-visible {
+  outline: 3px solid black;
+}
+.button:disabled {
+  --button-bg-color: hsl(200, 11%, 84%);
+  --indicator-bg-color: #c6ced2;
+}
+.button:hover .button__hover-icon, .button:disabled .button__hover-icon {
+  filter: brightness(100);
+}
+.button__hover-indicator {
+  background-color: var(--_indicator-bg-color);
+  padding: 1.125rem;
+}
+.button__text {
+  flex: 1;
+}
+
+.form {
+  /* add message benith invalid text fields inside a form */
+}
+.form label:has([data-invalid])::after {
+  content: "invalid";
+  font-style: italic;
+  color: var(--clr-secondary-500);
+}
+
+/* label-input pair */
+.input-pair {
+  display: grid;
+  gap: 0.5rem;
+  width: 30%;
+  font-weight: 700;
+}
+
+.input-field {
+  background-color: var(--clr-secondary-400);
+  color: var(--clr-primary-700);
+  padding: 1rem;
+  border: none;
+  font-weight: 400;
+}
+.input-field::placeholder {
+  color: hsl(240, 3%, 64%);
+}
+.input-field:focus {
+  outline: 2px solid var(--clr-primary-500);
+}
+.input-field[data-invalid] {
+  outline: 2px solid var(--clr-secondary-500);
+}
+
+.text-field__input {
+  background-color: var(--clr-secondary-400);
+  color: var(--clr-primary-700);
+  padding: 1rem;
+  border: none;
+  font-weight: 400;
+}
+.text-field__input::placeholder {
+  color: hsl(240, 3%, 64%);
+}
+.text-field__input:focus {
+  outline: 2px solid var(--clr-primary-500);
+}
+.text-field__input[data-invalid] {
+  outline: 2px solid var(--clr-secondary-500);
+}
+
+.text-area__input {
+  resize: none;
+}
+
+/* lists */
+/* navigations  */
+/* headings */
+h3, h2, h1 {
+  font-family: "Ibarra", "serif";
+}
+
+h1 {
+  font-size: var(--fs-600);
+  font-weight: 700;
+  color: var(--clr-primary-700);
+}
+
+h2 {
+  font-size: var(--fs-500);
+  font-weight: 700;
+  color: var(--clr-primary-700);
+}
+
+h3 {
+  font-size: var(--fs-400);
+  font-weight: 400;
+  color: var(--clr-primary-700);
+}
+/*# sourceMappingURL=style.css.map */

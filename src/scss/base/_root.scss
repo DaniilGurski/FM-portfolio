@@ -1,0 +1,10 @@
+@use "../abstracts/" as *;
+@use "../utils" as *;
+@use "../base/font-face" as *;
+
+
+/* global variables */
+:root {
+    @include convert_colors();
+    @include convert_typography();
+}

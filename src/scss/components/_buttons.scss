@@ -1,0 +1,81 @@
+@use "../abstracts/" as *;
+
+
+/* buttons */
+$disabled-state-color: hsl(200, 11%, 84%);
+
+.button {
+    --_button-bg-color: var(--button-bg-color, #{$clr-dark-blue});
+    --_indicator-bg-color: var(--indicator-bg-color, hsl(205, 41%, 18%));
+
+    display: flex;
+    align-items: center;
+    width: min(80%, rem(200));
+
+    padding: 0;
+    background-color: var(--button-bg-color, #{$clr-dark-blue});
+    color: $clr-white;
+    cursor: pointer;
+
+    border: 1px solid transparent;
+
+    letter-spacing: em(2);
+
+
+    &--secondary {
+        justify-content: center;
+
+        padding: rem(18);
+
+        color: currentColor;
+        background: none;
+        border: 1px solid currentColor;
+
+    
+        &:hover:not(:disabled) {
+            background-color: $clr-dark-blue;
+            color: $clr-white;
+            border-color: transparent;
+        }
+
+        &:disabled {
+            color: $disabled-state-color;
+        }
+    }
+
+
+    &:hover {
+        --button-bg-color: #{$clr-accent};
+        --indicator-bg-color: hsl(167, 36%, 49%);
+    }
+
+
+    &:focus-visible {
+        outline: 3px solid black;
+    }
+
+
+    &:disabled {
+        --button-bg-color: #{$disabled-state-color};
+        --indicator-bg-color: #{darken($disabled-state-color, 4%)};
+    }
+    
+
+    /* make hover icon white if button is hovered or disabled */
+    &:hover, &:disabled {
+        .button__hover-icon {
+            filter: brightness(100);
+        }
+    }
+
+    
+    &__hover-indicator {
+        background-color: var(--_indicator-bg-color);
+        padding: rem(18);
+    }
+
+
+    &__text {
+        flex: 1;
+    }
+}

@@ -1,0 +1,32 @@
+/* font face */
+
+/* Ibarra */
+@font-face {
+    font-family: "Ibarra";
+    src: url("/fonts/IbarraReal/IbarraRealNova-Regular.ttf") format("truetype");
+
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Ibarra";
+    src: url("/fonts/IbarraReal/IbarraRealNova-Bold.ttf") format("truetype");
+
+    font-weight: 700;
+}
+
+
+/* Public Sans */
+@font-face {
+    font-family: "PublicSans";
+    src: url("/fonts/PublicSans/PublicSans-Regular.ttf") format("truetype");
+
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "PublicSans";
+    src: url("/fonts/PublicSans/PublicSans-Bold.ttf") format("truetype");
+
+    font-weight: 700;
+}

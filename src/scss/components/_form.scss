@@ -1,0 +1,49 @@
+@use "../abstracts/" as *;
+
+
+.form {
+    /* add message benith invalid text fields inside a form */
+    label:has([data-invalid])::after {
+        content: "invalid";
+        font-style: italic;
+        color: $clr-error;
+    }   
+}
+
+
+/* label-input pair */
+.input-pair {
+    @include grid(rem(8));
+    width: 30%;
+    font-weight: $font-weight-bold;
+}
+
+
+.input-field {
+    background-color: $clr-light-gray;
+    color: $clr-grayish-dark-blue;
+
+    padding: 1rem;
+    border: none;
+
+    font-weight: $font-weight-regular;
+
+    &::placeholder {
+        color: hsl(240, 3%, 64%);
+    }
+
+    &:focus {
+        outline: 2px solid $clr-accent;
+    }
+
+    &[data-invalid] {
+        outline: 2px solid $clr-error;
+    }
+}
+
+
+.text-area {
+    &__input {
+        resize: none;
+    }
+}
