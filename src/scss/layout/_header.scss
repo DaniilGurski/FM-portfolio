@@ -1,3 +1,33 @@
 @use "../abstracts/" as *;
 
 /* HEADER */
+.primary-header {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 2rem;
+
+
+    @include mq-max($small-screen-size) {
+        .primary-nav {
+            visibility: hidden;
+            position: absolute; 
+            bottom: -100%;
+            transform: translateY(100%);
+
+            text-align: center;
+            padding: rem(40) rem(80);
+            right: 0;
+            
+            color: $clr-white;
+            background-color: $clr-grayish-dark-blue;
+            @include grid(rem(32));
+        }
+        
+        .hamburger-menu {
+            display: block;
+        }
+    }
+}

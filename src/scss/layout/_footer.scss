@@ -1,3 +1,32 @@
 @use "../abstracts/" as *;
 
 /* FOOTER */
+.footer {
+    @include grid(rem(40));
+    justify-items: center;
+
+    background-color: $clr-grayish-dark-blue;
+    color: $clr-white;
+    padding: rem(56);
+    margin-top: rem(115);
+
+    img {
+        filter: brightness(100);
+    }
+
+    &__nav-item-group {
+        @include list($row:"false", $item-gap: 1rem, $off-markers: "true");
+        gap: rem(40);
+    }
+
+    &__nav-list {
+        text-align: center;
+        flex-direction: column;
+    }
+
+    &__contact-platforms {
+        @include list($row:"true", $item-gap: rem(15), $off-markers: "true");
+        align-items: center;
+    }
+
+}

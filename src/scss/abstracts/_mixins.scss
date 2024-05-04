@@ -2,11 +2,19 @@
 @use "typography" as *;
 @use "functions" as *;
 @use "sizes" as *;
+@use "sass:math";
 
 
 // Add min-width media query
-@mixin mq-desktop($breakpoint: 768) {
+@mixin mq-min($breakpoint: 768) {
     @media (min-width: em($breakpoint)) {
+        @content;
+    }
+}
+
+
+@mixin mq-max($breakpoint: 768) {
+    @media (max-width: em($breakpoint)) {
         @content;
     }
 }
@@ -34,7 +42,7 @@
             @each $screen-size, $typescale in $map {
                 
                 @if $screen-size == "large" {
-                    @include mq-desktop($breakpoint: 0) {
+                    @include mq-min($breakpoint: 0) {
                         @each $scale, $value in $typescale {
                             --fs-#{$scale}: #{$value};
                         }
@@ -54,7 +62,16 @@
 // Quick access to gap proprety for different situations
 @mixin flex($gap: 1rem) {
     display: flex;
-    gap: $gap;
+
+    @if type-of($gap) == string{
+        @error "Use unitless integer value or rem";
+    }
+
+    @if math.is-unitless($gap) {
+        gap: rem($gap);
+    } @else {
+        gap: $gap;
+    }
 }
 
 
@@ -81,10 +98,9 @@
 }
 
 
-@mixin heading($font-size, $font-weight, $color: black) {
+@mixin heading($font-size, $font-weight) {
     font-size: $font-size; 
     font-weight: $font-weight;
-    color: $color;
 }
 
 

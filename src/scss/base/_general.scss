@@ -6,3 +6,12 @@ body {
     background-color: $clr-white;
     color: $clr-grayish-dark-blue;
 }
+
+
+.border-block {
+    border-block: 1px solid $clr-light-gray;
+    padding-block: 2rem;
+    margin-block: 2rem;
+
+    @include grid(rem(24));
+}

@@ -1,3 +1,40 @@
 @use "../abstracts/" as *;
 
 /* MAIN */
+.main {
+    @include grid(rem(115));
+    &__profile-picture {
+        img {
+            width: 100%;
+        }
+    }
+}
+
+
+.hero {
+    @include grid(rem(24));
+
+    &__main {
+        @include grid(2rem);
+        background-color: $clr-white;
+    }
+}
+
+
+.contact-author {
+    @include grid(rem(40));
+    text-align: center;
+    justify-items: center;
+
+
+    &__leading-line {
+        display: none;
+    }
+
+
+    &__cta-lead {
+        @include heading($font-size-500, $font-weight-bold);
+    }
+}
+
+

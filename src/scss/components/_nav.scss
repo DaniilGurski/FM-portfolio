@@ -1,3 +1,13 @@
 @use "../abstracts/" as *;
 
 /* navigations  */
+.nav-list {
+    @include list($row: "true", $item-gap: rem(42), $off-markers: "true");
+
+    letter-spacing: rem(2);
+
+    &__link:hover,
+    &__link:focus {
+        color: $clr-accent;
+    }
+}
