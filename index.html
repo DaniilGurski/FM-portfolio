@@ -14,11 +14,12 @@
 </head>
 <body>
     <a href="#" class="skip-to-main"></a>
-    <div class="container">
-        <header class="primary-header">
+
+    <header class="primary-header container-grid">
+        <div class="primary-header__content">
             <img class="logo | header__logo" src="/dist/img/logo.svg" alt="logo">
             <!-- TODO: Make a snippet of this structure for future projects -->
-            <nav class="header__navigation">
+            <nav class="primary-header__navigation">
                 <ul class="nav-list primary-nav" id="primary-nav">
                     <li class="nav-list__item"><a href="#" class="nav-list__link">Home</a></li>
                     <li class="nav-list__item"><a href="#" class="nav-list__link">Portfolio</a></li>
@@ -29,118 +30,118 @@
                 <span class="visually-hidden">Menu</span>
                 <img src="/dist/img/icons/hamburger.svg" alt="">
                 </button>
-        </header>
+        </div>
+    </header>
 
-        <main class="main">
-            <section class="hero">
-                <picture>
-                    <!-- Desktop -->
-                    <source media="(min-width: 79.625em)" 
-                            srcset="/dist/img/homepage/desktop/image-homepage-hero.webp 1110w,
-                                    /dist/img/homepage/desktop/image-homepage-hero@2x.webp 2220w">
-                    <source media="(min-width: 79.625em)" 
-                            srcset="/dist/img/homepage/desktop/image-homepage-hero.jpg 1110w,
-                                    /dist/img/homepage/desktop/image-homepage-hero@2x.jpg 2220w">
+    <main class="main container-grid">
+        <section class="hero">
+            <picture>
+                <!-- Desktop -->
+                <source media="(min-width: 79.625em)" 
+                        srcset="/dist/img/homepage/desktop/image-homepage-hero.webp 1110w,
+                                /dist/img/homepage/desktop/image-homepage-hero@2x.webp 2220w">
+                <source media="(min-width: 79.625em)" 
+                        srcset="/dist/img/homepage/desktop/image-homepage-hero.jpg 1110w,
+                                /dist/img/homepage/desktop/image-homepage-hero@2x.jpg 2220w">
 
-                    <!-- Tablet -->
-                    <source media="(min-width: 48em)" 
-                            srcset="/dist/img/homepage/tablet/image-homepage-hero.webp 688w,
-                                    /dist/img/homepage/tablet/image-homepage-hero@2x.webp 1376w">
-                    <source media="(min-width: 48em)" 
-                            srcset="/dist/img/homepage/tablet/image-homepage-hero.jpg 688w,
-                                    /dist/img/homepage/tablet/image-homepage-hero@2x.jpg 1376w">
-                    
-                    <!-- Mobile -->
-                    <source media="(min-width: 36.5625em)" 
-                            srcset="/dist/img/homepage/mobile/image-homepage-hero.webp 311w,
-                                    /dist/img/homepage/mobile/image-homepage-hero@2x.webp 622w">
-                    <source media="(min-width: 36.5625em)" 
-                            srcset="/dist/img/homepage/mobile/image-homepage-hero.jpg 311w,
-                                    /dist/img/homepage/mobile/image-homepage-hero@2x.jpg 622w">
-                    
-                    <img src="/dist/img/homepage/mobile/image-homepage-hero.jpg"
-                         srcset="/dist/img/homepage/mobile/image-homepage-hero.jpg 311w,
-                                 /dist/img/homepage/mobile/image-homepage-hero@2x.jpg 622w">
-                </picture>
+                <!-- Tablet -->
+                <source media="(min-width: 48em)" 
+                        srcset="/dist/img/homepage/tablet/image-homepage-hero.webp 688w,
+                                /dist/img/homepage/tablet/image-homepage-hero@2x.webp 1376w">
+                <source media="(min-width: 48em)" 
+                        srcset="/dist/img/homepage/tablet/image-homepage-hero.jpg 688w,
+                                /dist/img/homepage/tablet/image-homepage-hero@2x.jpg 1376w">
+                
+                <!-- Mobile -->
+                <source media="(min-width: 36.5625em)" 
+                        srcset="/dist/img/homepage/mobile/image-homepage-hero.webp 311w,
+                                /dist/img/homepage/mobile/image-homepage-hero@2x.webp 622w">
+                <source media="(min-width: 36.5625em)" 
+                        srcset="/dist/img/homepage/mobile/image-homepage-hero.jpg 311w,
+                                /dist/img/homepage/mobile/image-homepage-hero@2x.jpg 622w">
+                
+                <img src="/dist/img/homepage/mobile/image-homepage-hero.jpg"
+                        srcset="/dist/img/homepage/mobile/image-homepage-hero.jpg 311w,
+                                /dist/img/homepage/mobile/image-homepage-hero@2x.jpg 622w">
+            </picture>
 
-                <div class="hero__main">
-                    <h1>
-                        Hey, I`m Daniil Gurski and I love building beautiful websites
-                    </h1>
+            <div class="hero__main">
+                <h1>
+                    Hey, I`m Daniil Gurski and I love building beautiful websites
+                </h1>
 
-                    <button class="button">
-                        <div class="button__hover-indicator">
-                            <img class="button__hover-icon" src="dist/img/icons/down-arrows.svg" alt="" aria-hidden="true">
-                        </div>
-                        <span class="button__text">About me</span>
-                    </button>
-                </div>
-            </section>
-
-
-            <article class="main__about-me">
-                <picture class="main__profile-picture">
-                    <img src="" alt="profile image of the author" srcset="">
-                </picture>
-
-                <div class="border-block">
-                    <h2> About me </h2>
-
-                    <p>
-                        I`m a junior front-end developer looking for a new role in an exciting company. I focus on writing accessible HTML, using modern CSS practices and writing clean JavaScript. When writing JavaScript code, I mostly use React, but I can adapt to whatever tools are required. I`m based in London, UK, but I`m happy working remotely and have experience in remote teams. When I`m not coding, you`ll find me outdoors. I love being out in nature whether that`s going for a walk, run or cycling. I`d love you to check out my work.
-                    </p>
+                <button class="button">
+                    <div class="button__hover-indicator">
+                        <img class="button__hover-icon" src="dist/img/icons/down-arrows.svg" alt="" aria-hidden="true">
+                    </div>
+                    <span class="button__text">About me</span>
+                </button>
+            </div>
+        </section>
 
 
-                    <a class="button button--secondary" href="#">
-                        Go To Portfolio
-                    </a>
-                </div>
-            </article>
+        <article class="main__about-me">
+            <picture class="main__profile-picture">
+                <img src="" alt="profile image of the author" srcset="">
+            </picture>
 
-            <section class="contact-author">
-                <span class="contact-author__cta-lead"> 
-                    Interested in doing a project together? 
-                </span>
+            <div class="border-block">
+                <h2> About me </h2>
 
-                <span class="contact-author__leading-line"> </span>
+                <p>
+                    I`m a junior front-end developer looking for a new role in an exciting company. I focus on writing accessible HTML, using modern CSS practices and writing clean JavaScript. When writing JavaScript code, I mostly use React, but I can adapt to whatever tools are required. I`m based in London, UK, but I`m happy working remotely and have experience in remote teams. When I`m not coding, you`ll find me outdoors. I love being out in nature whether that`s going for a walk, run or cycling. I`d love you to check out my work.
+                </p>
+
 
                 <a class="button button--secondary" href="#">
-                    Contact Me
+                    Go To Portfolio
                 </a>
-            </section>
-        </main>
+            </div>
+        </article>
 
-        <footer class="footer">
-            <img src="dist/img/logo.svg" alt="logo">
+        <section class="contact-author">
+            <span class="contact-author__cta-lead"> 
+                Interested in doing a project together? 
+            </span>
 
-            <nav class="footer__navigation">
-                <ul class="footer__nav-item-group">
-                    <ul class="nav-list | footer__nav-list" id="footer-nav">
-                        <li class="nav-list__item"><a href="#" class="nav-list__link">Home</a></li>
-                        <li class="nav-list__item"><a href="#" class="nav-list__link">Portfolio</a></li>
-                        <li class="nav-list__item"><a href="#" class="nav-list__link">Contact Me</a></li>
-                    </ul>
+            <span class="contact-author__leading-line"> </span>
 
-                    <ul class="footer__contact-platforms">
-                        <li class="footer-nav__item">
-                            <a href="#" class="footer-nav__link">
-                                <img src="dist/img/icons/github.svg" alt="">
-                            </a>
-                        </li>
-                        <li class="footer-nav__item">
-                            <a href="#" class="footer-nav__link">
-                                <img src="dist/img/icons/twitter.svg" alt="">
-                            </a>
-                        </li>
-                        <li class="footer-nav__item">
-                            <a href="#" class="footer-nav__link">
-                                <img src="dist/img/icons/linkedin.svg" alt="">
-                            </a>
-                        </li>
-                    </ul>
+            <a class="button button--secondary" href="#">
+                Contact Me
+            </a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <img src="dist/img/logo.svg" alt="logo">
+
+        <nav class="footer__navigation">
+            <ul class="footer__nav-item-group">
+                <ul class="nav-list | footer__nav-list" id="footer-nav">
+                    <li class="nav-list__item"><a href="#" class="nav-list__link">Home</a></li>
+                    <li class="nav-list__item"><a href="#" class="nav-list__link">Portfolio</a></li>
+                    <li class="nav-list__item"><a href="#" class="nav-list__link">Contact Me</a></li>
                 </ul>
-            </nav>
-        </footer>
-    </div>
+
+                <ul class="footer__contact-platforms">
+                    <li class="footer-nav__item">
+                        <a href="#" class="footer-nav__link">
+                            <img src="dist/img/icons/github.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="#" class="footer-nav__link">
+                            <img src="dist/img/icons/twitter.svg" alt="">
+                        </a>
+                    </li>
+                    <li class="footer-nav__item">
+                        <a href="#" class="footer-nav__link">
+                            <img src="dist/img/icons/linkedin.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </ul>
+        </nav>
+    </footer>
 </body>
 </html>

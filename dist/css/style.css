@@ -74,9 +74,25 @@ p {
 
 /* container */
 .container {
-  width: min(90%, 120rem);
-  padding-inline: 1rem;
+  width: min(90%, 100ch);
+  padding-inline: 2rem;
   margin-inline: auto;
+}
+
+.container-grid {
+  display: grid;
+  grid-template-columns: [full-width-start] minmax(2rem, 1fr) [breakout-start] minmax(0, 10ch) [content-start] min(100% - 4rem, 100ch) [content-end] minmax(0, 10ch) [breakout-end] minmax(2rem, 1fr) [full-width-end];
+}
+.container-grid > * {
+  grid-column: content;
+}
+
+.full-width {
+  grid-column: full-width;
+}
+
+.breakout {
+  grid-column: breakout;
 }
 
 /* appearence utilities */
@@ -167,6 +183,7 @@ body {
   font-family: "PublicSans", "sans-serif";
   background-color: var(--clr-secondary-100);
   color: var(--clr-primary-700);
+  overflow-x: hidden;
 }
 
 .border-block {
@@ -174,7 +191,7 @@ body {
   padding-block: 2rem;
   margin-block: 2rem;
   display: grid;
-  gap: 1.5rem;
+  row-gap: 1.5rem;
 }
 
 /* buttons */
@@ -250,7 +267,7 @@ body {
 /* label-input pair */
 .input-pair {
   display: grid;
-  gap: 0.5rem;
+  row-gap: 0.5rem;
   width: 30%;
   font-weight: 700;
 }
@@ -311,7 +328,7 @@ h3 {
 }
 
 /* HEADER */
-.primary-header {
+.primary-header__content {
   position: relative;
   display: flex;
   align-items: center;
@@ -330,7 +347,7 @@ h3 {
     color: var(--clr-secondary-100);
     background-color: var(--clr-primary-700);
     display: grid;
-    gap: 2rem;
+    row-gap: 2rem;
   }
   .primary-header .hamburger-menu {
     display: block;
@@ -340,7 +357,7 @@ h3 {
 /* FOOTER */
 .footer {
   display: grid;
-  gap: 2.5rem;
+  row-gap: 2.5rem;
   justify-items: center;
   background-color: var(--clr-primary-700);
   color: var(--clr-secondary-100);
@@ -354,7 +371,7 @@ h3 {
   margin: 0;
   padding: 0;
   display: grid;
-  gap: 1rem;
+  row-gap: 1rem;
   list-style-type: none;
   gap: 2.5rem;
 }
@@ -374,7 +391,7 @@ h3 {
 /* MAIN */
 .main {
   display: grid;
-  gap: 7.1875rem;
+  row-gap: 7.1875rem;
 }
 .main__profile-picture img {
   width: 100%;
@@ -382,17 +399,17 @@ h3 {
 
 .hero {
   display: grid;
-  gap: 1.5rem;
+  row-gap: 1.5rem;
 }
 .hero__main {
   display: grid;
-  gap: 2rem;
+  row-gap: 2rem;
   background-color: var(--clr-secondary-100);
 }
 
 .contact-author {
   display: grid;
-  gap: 2.5rem;
+  row-gap: 2.5rem;
   text-align: center;
   justify-items: center;
 }

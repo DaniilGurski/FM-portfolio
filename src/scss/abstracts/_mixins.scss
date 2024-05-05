@@ -77,7 +77,7 @@
 
 @mixin grid($gap: 1rem) {
     display: grid;
-    gap: $gap;
+    row-gap: $gap;
 }
 
 
