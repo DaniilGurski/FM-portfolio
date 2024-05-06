@@ -2,16 +2,16 @@
 
 /* FOOTER */
 .footer {
-    @include grid(rem(40));
-    justify-items: center;
-
-    background-color: $clr-grayish-dark-blue;
-    color: $clr-white;
     padding: rem(56);
     margin-top: rem(115);
+    background-color: $clr-grayish-dark-blue;
+    color: $clr-white;
+    &__content {
+        @include grid(rem(40));
+        justify-items: center;
+    }
 
-    // margin-inline: calc(50% - 50vw);
-
+    
     img {
         filter: brightness(100);
     }
@@ -29,6 +29,32 @@
     &__contact-platforms {
         @include list($row:"true", $item-gap: rem(15), $off-markers: "true");
         align-items: center;
+    }
+
+
+
+    @include mq-min($medium-screen-size) {
+        &__content {
+            grid-template-columns: auto 1fr;
+            align-items: center;
+            column-gap: rem(40);
+        }
+
+
+        &__navigation {
+            width: 100%;
+        }
+
+
+        &__nav-item-group {
+            display: flex;
+            justify-content: space-between;
+        }
+
+
+        &__nav-list {
+            flex-direction: row;
+        }
     }
 
 }

@@ -52,7 +52,7 @@ function buildStyles() {
 
 
 function optimizeImages() {
-    return src(`${srcPath}img/**/*`, `!${srcPath}img/**/*.svg`)
+    return src(`${srcPath}img/**/*`, [`!${srcPath}img/**/*.svg`])
 
         .pipe(newer(`${destPath}img/`))
         .pipe(webp())
