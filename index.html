@@ -15,52 +15,42 @@
 <body>
     <a href="#" class="skip-to-main"></a>
 
-
     <div class="container-grid">
-        <header class="primary-header container-grid">
-                <img class="logo | header__logo" src="/dist/img/logo.svg" alt="logo">
-                <!-- TODO: Make a snippet of this structure for future projects -->
-                <nav class="primary-header__navigation">
-                    <ul class="nav-list primary-nav" id="primary-nav">
-                        <li class="nav-list__item"><a href="#" class="nav-list__link">Home</a></li>
-                        <li class="nav-list__item"><a href="#" class="nav-list__link">Portfolio</a></li>
-                        <li class="nav-list__item"><a href="#" class="nav-list__link">Contact Me</a></li>
-                    </ul>
-                </nav>
-                <button class="hamburger-menu" aria-expanded="false" aria-controls="primary-nav">
-                    <span class="visually-hidden">Menu</span>
-                    <img src="/dist/img/icons/hamburger.svg" alt="">
-                </button>
+        <header class="primary-header | container-grid">
+            <img class="logo | header__logo" src="/dist/img/logo.svg" alt="logo">
+            <!-- TODO: Make a snippet of this structure for future projects -->
+            <nav class="primary-header__navigation">
+                <ul class="nav-list primary-nav" id="primary-nav">
+                    <li class="nav-list__item"><a href="#" class="nav-list__link">Home</a></li>
+                    <li class="nav-list__item"><a href="pages/portfolio.html" class="nav-list__link">Portfolio</a></li>
+                    <li class="nav-list__item"><a href="#" class="nav-list__link">Contact Me</a></li>
+                </ul>
+            </nav>
+            <button class="hamburger-menu" aria-expanded="false" aria-controls="primary-nav">
+                <span class="visually-hidden">Menu</span>
+                <img src="/dist/img/icons/hamburger.svg" alt="">
+            </button>
         </header>
-        <main class="main">
+        <main class="home-main">
             <section class="hero">
                 <picture class="hero__picture">
                     <!-- Desktop -->
                     <source media="(min-width: 79.625em)"
                             srcset="/dist/img/homepage/desktop/image-homepage-hero.webp 1110w,
                                     /dist/img/homepage/desktop/image-homepage-hero@2x.webp 2220w">
-                    <source media="(min-width: 79.625em)"
-                            srcset="/dist/img/homepage/desktop/image-homepage-hero.jpg 1110w,
-                                    /dist/img/homepage/desktop/image-homepage-hero@2x.jpg 2220w">
                     <!-- Tablet -->
                     <source media="(min-width: 48em)"
                             srcset="/dist/img/homepage/tablet/image-homepage-hero.webp 688w,
                                     /dist/img/homepage/tablet/image-homepage-hero@2x.webp 1376w">
-                    <source media="(min-width: 48em)"
-                            srcset="/dist/img/homepage/tablet/image-homepage-hero.jpg 688w,
-                                    /dist/img/homepage/tablet/image-homepage-hero@2x.jpg 1376w">
         
                     <!-- Mobile -->
                     <source media="(min-width: 36.5625em)"
                             srcset="/dist/img/homepage/mobile/image-homepage-hero.webp 311w,
                                     /dist/img/homepage/mobile/image-homepage-hero@2x.webp 622w">
-                    <source media="(min-width: 36.5625em)"
-                            srcset="/dist/img/homepage/mobile/image-homepage-hero.jpg 311w,
-                                    /dist/img/homepage/mobile/image-homepage-hero@2x.jpg 622w">
         
-                    <img src="/dist/img/homepage/mobile/image-homepage-hero.jpg"
-                            srcset="/dist/img/homepage/mobile/image-homepage-hero.jpg 311w,
-                                    /dist/img/homepage/mobile/image-homepage-hero@2x.jpg 622w">
+                    <img src="/dist/img/homepage/mobile/image-homepage-hero.webp"
+                      srcset="/dist/img/homepage/mobile/image-homepage-hero.webp 311w,
+                              /dist/img/homepage/mobile/image-homepage-hero@2x.webp 622w">
                 </picture>
                 <div class="hero__main">
                     <h1>
@@ -74,32 +64,24 @@
                     </button>
                 </div>
             </section>
-            <article class="main__about-me">
-                <picture class="main__profile-picture">
+            <article class="home-main__about-me">
+                <picture class="home-main__profile-picture">
                     <!-- Desktop -->
                     <source media="(min-width: 79.625em)"
                             srcset="/dist/img/homepage/desktop/image-homepage-profile.webp 540w,
                                             /dist/img/homepage/desktop/image-homepage-profile@2x.webp 1080w">
-                    <source media="(min-width: 79.625em)"
-                            srcset="/dist/img/homepage/desktop/image-homepage-profile.jpg 540w,
-                                    /dist/img/homepage/desktop/image-homepage-profile@2x.jpg 1080w">
                     <!-- Tablet -->
                     <source media="(min-width: 48em)"
                             srcset="/dist/img/homepage/tablet/image-homepage-profile.webp 281w,
                                     /dist/img/homepage/tablet/image-homepage-profile@2x.webp 562w">
-                    <source media="(min-width: 48em)"
-                            srcset="/dist/img/homepage/tablet/image-homepage-profile.jpg 281w,
-                                    /dist/img/homepage/tablet/image-homepage-profile@2x.jpg 562w">
                     <!-- Mobile -->
                     <source media="(min-width: 36.5625em)"
                             srcset="/dist/img/homepage/mobile/image-homepage-profile.webp 311w,
                                     /dist/img/homepage/mobile/image-homepage-profile@2x.webp 622w">
-                    <source media="(min-width: 36.5625em)"
-                            srcset="/dist/img/homepage/mobile/image-homepage-profile.jpg 311w,
-                                    /dist/img/homepage/mobile/image-homepage-profile@2x.jpg 622w">
-                    <img src="/dist/img/homepage/mobile/image-homepage-profile.jpg"
-                      srcset="/dist/img/homepage/mobile/image-homepage-profile.jpg 311w,
-                              /dist/img/homepage/mobile/image-homepage-profile@2x.jpg 622w">
+
+                    <img src="/dist/img/homepage/mobile/image-homepage-profile.webp"
+                      srcset="/dist/img/homepage/mobile/image-homepage-profile.webp 311w,
+                              /dist/img/homepage/mobile/image-homepage-profile@2x.webp 622w">
                 </picture>
                 <div class="border-block">
                     <h2> About me </h2>
@@ -111,17 +93,19 @@
                     </a>
                 </div>
             </article>
-            <section class="contact-author">
-                <span class="contact-author__cta-lead">
-                    Interested in doing a project together?
-                </span>
-                <span class="contact-author__leading-line"> </span>
-                <a class="button button--secondary" href="#">
-                    Contact Me
-                </a>
-            </section>
         </main>
-        <footer class="footer full-width container-grid">
+
+        <div class="contact-author">
+            <span class="contact-author__cta-lead">
+                Interested in doing a project together?
+            </span>
+            <span class="contact-author__leading-line"> </span>
+            <a class="button button--secondary" href="#">
+                Contact Me
+            </a>
+        </div>
+        
+        <footer class="footer | full-width container-grid">
             <div class="footer__content">
                 <img src="dist/img/logo.svg" alt="logo">
                 <nav class="footer__navigation">
