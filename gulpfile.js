@@ -92,7 +92,7 @@ function watchTasks() {
 
     watch([`${srcPath}img`], optimizeImages)
     
-    watch(["*.html"]).on("change", browserSync.reload);
+    watch(["./**/*.html"]).on("change", browserSync.reload);
 }
 
 
