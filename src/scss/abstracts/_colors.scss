@@ -6,6 +6,7 @@ $colors: (
     ),
 
     secondary: (
+        600: hsl(247, 5%, 37%),
         500: hsl(0, 90%, 57%),
         400: hsl(240, 2%, 90%),
         100: hsl(0, 0%, 98%)
@@ -15,8 +16,9 @@ $colors: (
     
 $clr-dark-blue: var(--clr-primary-800);
 $clr-grayish-dark-blue: var(--clr-primary-700);
-$clr-accent: var(--clr-primary-500);
 
+$clr-accent: var(--clr-primary-500);
 $clr-error: var(--clr-secondary-500);       // error
 $clr-light-gray: var(--clr-secondary-400);  // text field
 $clr-white: var(--clr-secondary-100);       // background color
+$clr-body: var(--clr-secondary-600);

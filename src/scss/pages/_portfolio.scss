@@ -1,0 +1,59 @@
+@use "../abstracts/" as *;
+
+/* portfolio page related styling */
+.portfolio-main {
+    @include grid(rem(115));
+    
+    &__project-list {
+        @include list($row: "false", $item-gap: 1rem, $off-markers: "true");
+        
+        @include mq-min($medium-screen-size) {
+            grid-template-columns: rem(95) 1fr rem(95);
+        }
+
+        .border-block {
+            @include mq-min($medium-screen-size) {
+                --padding-block: #{rem(50)};
+            }
+        
+            @include mq-min($large-screen-size) {
+                --padding-block: #{rem(80)};
+            }
+        }
+    }
+}
+
+
+.portfolio-project {
+    grid-column: 1 / -1;
+
+    /* move preview before text for every even element */
+    &:nth-child(even) {
+        .portfolio-project__project-preview {
+            order: 1;
+        }
+    }
+
+
+    &__project-preview {
+        img {
+            width: 100%;
+        }
+    }
+
+    @include mq-min($medium-screen-size) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: rem(125);
+        align-items: center;
+    }
+
+    @include mq-min($large-screen-size) {
+        flex-direction: column;
+        grid-column: 1 / span 2;
+            
+        &:nth-child(even) {
+            grid-column: 2 / span 2;
+        }
+    }
+}

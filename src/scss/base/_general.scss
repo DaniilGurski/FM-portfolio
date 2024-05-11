@@ -4,7 +4,7 @@
 body {
     font-family: $font-family-body;
     background-color: $clr-white;
-    color: $clr-grayish-dark-blue;
+    color: $clr-body;
 
     overflow-x: hidden;
 }
@@ -12,7 +12,7 @@ body {
 
 .border-block {
     border-block: 1px solid $clr-light-gray;
-    padding-block: 2rem;
+    padding-block: var(--padding-block, 2rem);
     margin-block: 2rem;
 
     @include grid(rem(24));

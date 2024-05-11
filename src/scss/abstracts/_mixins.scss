@@ -3,6 +3,8 @@
 @use "functions" as *;
 @use "sizes" as *;
 @use "sass:math";
+@use "breakpoints" as *;
+
 
 
 // Add min-width media query
@@ -42,7 +44,7 @@
             @each $screen-size, $typescale in $map {
                 
                 @if $screen-size == "large" {
-                    @include mq-min($breakpoint: 0) {
+                    @include mq-min($large-screen-size) {
                         @each $scale, $value in $typescale {
                             --fs-#{$scale}: #{$value};
                         }
@@ -98,9 +100,10 @@
 }
 
 
-@mixin heading($font-size, $font-weight) {
+@mixin heading($font-size, $font-weight, $color: black) {
     font-size: $font-size; 
     font-weight: $font-weight;
+    color: $color;
 }
 
 

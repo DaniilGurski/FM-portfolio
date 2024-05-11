@@ -134,6 +134,26 @@ p {
   gap: var(--gap, 1rem);
 }
 
+/* text utilities */
+.text-center {
+  text-align: center;
+}
+
+.text-underline {
+  --underline-offset: 4px;
+  text-decoration: underline;
+  text-underline-offset: var(--underline-offset);
+}
+
+/* typography utilities */
+.body-2 {
+  font-size: var(--fs-200);
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+
 /* font face */
 /* Ibarra */
 @font-face {
@@ -162,6 +182,7 @@ p {
   --clr-primary-800: hsl(205, 41%, 21%);
   --clr-primary-700: hsl(245, 10%, 22%);
   --clr-primary-500: hsl(167, 36%, 54%);
+  --clr-secondary-600: hsl(247, 5%, 37%);
   --clr-secondary-500: hsl(0, 90%, 57%);
   --clr-secondary-400: hsl(240, 2%, 90%);
   --clr-secondary-100: hsl(0, 0%, 98%);
@@ -172,7 +193,7 @@ p {
   --fs-200: 0.9375rem;
   --fs-100: 0.75rem;
 }
-@media (min-width: 0em) {
+@media (min-width: 79.625em) {
   :root {
     --fs-600: 3.125rem;
   }
@@ -182,16 +203,158 @@ p {
 body {
   font-family: "PublicSans", "sans-serif";
   background-color: var(--clr-secondary-100);
-  color: var(--clr-primary-700);
+  color: var(--clr-secondary-600);
   overflow-x: hidden;
 }
 
 .border-block {
   border-block: 1px solid var(--clr-secondary-400);
-  padding-block: 2rem;
+  padding-block: var(--padding-block, 2rem);
   margin-block: 2rem;
   display: grid;
   row-gap: 1.5rem;
+}
+
+/* portfolio page related styling */
+.portfolio-main {
+  display: grid;
+  row-gap: 7.1875rem;
+}
+.portfolio-main__project-list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  row-gap: 1rem;
+  list-style-type: none;
+}
+@media (min-width: 48em) {
+  .portfolio-main__project-list {
+    grid-template-columns: 5.9375rem 1fr 5.9375rem;
+  }
+}
+@media (min-width: 48em) {
+  .portfolio-main__project-list .border-block {
+    --padding-block: 3.125rem;
+  }
+}
+@media (min-width: 79.625em) {
+  .portfolio-main__project-list .border-block {
+    --padding-block: 5rem;
+  }
+}
+
+.portfolio-project {
+  grid-column: 1/-1;
+  /* move preview before text for every even element */
+}
+.portfolio-project:nth-child(even) .portfolio-project__project-preview {
+  order: 1;
+}
+.portfolio-project__project-preview img {
+  width: 100%;
+}
+@media (min-width: 48em) {
+  .portfolio-project {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 7.8125rem;
+    align-items: center;
+  }
+}
+@media (min-width: 79.625em) {
+  .portfolio-project {
+    flex-direction: column;
+    grid-column: 1/span 2;
+  }
+  .portfolio-project:nth-child(even) {
+    grid-column: 2/span 2;
+  }
+}
+
+.project-main {
+  --gap: 4rem;
+  padding-top: clamp(2.5rem, 5vw, 5.875rem);
+}
+.about-project {
+  display: grid;
+  row-gap: 2.5rem;
+}
+.about-project > .grid {
+  --gap: 2.5rem;
+}
+.about-project__border-block {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(21.875em, 1fr));
+  margin-block: 0;
+}
+.about-project__tags {
+  --gap: 0.5rem;
+}
+.about-project__description {
+  grid-row: span 2;
+}
+.about-project__background {
+  --gap: 1.75rem;
+}
+.about-project__static-previews {
+  --gap: 2.5rem;
+}
+.about-project__preview-list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  row-gap: 2rem;
+  list-style-type: none;
+}
+@media (min-width: 79.625em) {
+  .about-project {
+    grid-template-columns: 1fr 2fr;
+    column-gap: 7.1875rem;
+    align-items: start;
+  }
+}
+
+.switch-project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.switch-project__button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.switch-project__section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-block: 1.5rem;
+  border-block: 1px solid var(--clr-secondary-400);
+}
+.switch-project__section[data-switch-to=prev] {
+  border-right: 1px solid var(--clr-secondary-400);
+}
+.switch-project__section[data-switch-to=next] {
+  align-items: end;
+  text-align: right;
+}
+.switch-project__project-name::after {
+  content: attr(data-undertext);
+  display: block;
+  color: hsl(240, 3%, 60%);
+  font-family: "PublicSans", "sans-serif";
+  font-size: var(--fs-300);
+}
+@media (min-width: 48em) {
+  .switch-project__section {
+    flex-direction: row;
+  }
+  .switch-project__section[data-switch-to=next] {
+    align-items: center;
+    justify-content: end;
+  }
+  .switch-project__section[data-switch-to=next] .switch-project__button {
+    order: 1;
+  }
 }
 
 /* buttons */
@@ -214,7 +377,7 @@ body {
 .button--secondary {
   justify-content: center;
   padding: 1.125rem;
-  color: currentColor;
+  color: var(--clr-primary-700);
   background: none;
   border: 1px solid currentColor;
 }
@@ -315,16 +478,19 @@ h3, h2, h1 {
 h1 {
   font-size: var(--fs-600);
   font-weight: 700;
+  color: var(--clr-primary-700);
 }
 
 h2 {
   font-size: var(--fs-500);
   font-weight: 700;
+  color: var(--clr-primary-700);
 }
 
 h3 {
   font-size: var(--fs-400);
   font-weight: 400;
+  color: var(--clr-primary-700);
 }
 
 /* HEADER */
@@ -357,7 +523,6 @@ h3 {
 /* FOOTER */
 .footer {
   padding: 3.5rem;
-  margin-top: 7.1875rem;
   background-color: var(--clr-primary-700);
   color: var(--clr-secondary-100);
 }
@@ -408,21 +573,21 @@ h3 {
 }
 
 /* MAIN */
-.main {
+.home-main {
   display: grid;
   row-gap: 7.1875rem;
 }
-.main__profile-picture img {
+.home-main__profile-picture img {
   width: 100%;
 }
 @media (min-width: 48em) {
-  .main__about-me {
+  .home-main__about-me {
     display: grid;
     grid-template-columns: 1fr minmax(350px, 40%);
     column-gap: 5.875rem;
     align-items: center;
   }
-  .main__profile-picture img {
+  .home-main__profile-picture img {
     height: 80vh;
     object-fit: cover;
   }
@@ -438,11 +603,13 @@ h3 {
   grid-area: hero;
 }
 .hero__main {
+  --_hero-main-padding: 1.5rem;
   display: grid;
   row-gap: 2rem;
   text-wrap: balance;
   background-color: var(--clr-secondary-100);
   grid-area: main;
+  padding: var(--_hero-main-padding) var(--_hero-main-padding) 0 0;
 }
 @media (min-width: 48em) {
   .hero {
@@ -465,6 +632,7 @@ h3 {
   row-gap: 2.5rem;
   text-align: center;
   justify-items: center;
+  padding-block: 7.1875rem;
 }
 .contact-author__leading-line {
   display: none;
@@ -475,6 +643,7 @@ h3 {
 .contact-author__cta-lead {
   font-size: var(--fs-500);
   font-weight: 700;
+  color: black;
 }
 @media (min-width: 48em) {
   .contact-author {

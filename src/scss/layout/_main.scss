@@ -1,7 +1,7 @@
 @use "../abstracts/" as *;
 
 /* MAIN */
-.main {
+.home-main {
     @include grid(rem(115));
     &__profile-picture {
         img {
@@ -40,10 +40,17 @@
     }
 
     &__main {
+
+        --_hero-main-padding: 1.5rem;
+
         @include grid(2rem);
         text-wrap: balance;
         background-color: $clr-white;
         grid-area: main;
+
+        padding: var(--_hero-main-padding) var(--_hero-main-padding) 0 0;
+
+        
     }
 
 
@@ -73,6 +80,7 @@
     @include grid(rem(40));
     text-align: center;
     justify-items: center;
+    padding-block: rem(115);
 
 
     &__leading-line {

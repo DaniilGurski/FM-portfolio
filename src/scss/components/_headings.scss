@@ -8,15 +8,15 @@
 
 h1 {
     @extend %heading-font;
-    @include heading($font-size-h1, $font-weight-bold);
+    @include heading($font-size-h1, $font-weight-bold,$clr-grayish-dark-blue);
 }
 
 h2 {
     @extend %heading-font;
-    @include heading($font-size-h2, $font-weight-bold);
+    @include heading($font-size-h2, $font-weight-bold,$clr-grayish-dark-blue);
 }
 
 h3 {
     @extend %heading-font;
-    @include heading($font-size-h3, $font-weight-regular);
+    @include heading($font-size-h3, $font-weight-regular,$clr-grayish-dark-blue);
 }
