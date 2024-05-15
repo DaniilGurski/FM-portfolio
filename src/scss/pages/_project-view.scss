@@ -86,6 +86,10 @@
             align-items: end;
             text-align: right;
         }
+
+        &--hide-content > * {
+            visibility: hidden;
+        }
     }
 
     &__project-name::after {

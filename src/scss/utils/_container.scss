@@ -29,6 +29,8 @@ $breakout-size: math.div(($breakout-max-width - $container-max-width), 2);
     > * {
         grid-column: content;
     }
+
+    padding-top: clamp(rem(80), 8vw, rem(120));
 }
 
 

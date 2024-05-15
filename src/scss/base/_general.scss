@@ -13,7 +13,23 @@ body {
 .border-block {
     border-block: 1px solid $clr-light-gray;
     padding-block: var(--padding-block, 2rem);
-    margin-block: 2rem;
+    margin-block: var(--margin-block, 2rem);
 
     @include grid(rem(24));
+
+    > .grid {
+        gap: inherit;
+    }
+}
+
+
+.social-media {
+    @include list($row:"true", $item-gap: rem(15), $off-markers: "true");
+    align-items: center;
+
+    &--light {
+        img {
+            filter: brightness(100%);
+        }
+    }
 }

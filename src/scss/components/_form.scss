@@ -14,7 +14,6 @@
 /* label-input pair */
 .input-pair {
     @include grid(rem(8));
-    width: 30%;
     font-weight: $font-weight-bold;
 }
 

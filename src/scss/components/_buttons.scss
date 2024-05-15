@@ -7,6 +7,7 @@ $disabled-state-color: hsl(200, 11%, 84%);
 .button {
     --_button-bg-color: var(--button-bg-color, #{$clr-dark-blue});
     --_indicator-bg-color: var(--indicator-bg-color, hsl(205, 41%, 18%));
+    --_button-padding: #{rem(18)};
 
     display: flex;
     align-items: center;
@@ -47,6 +48,12 @@ $disabled-state-color: hsl(200, 11%, 84%);
     }
 
 
+    &--no-icon {
+        padding: var(--_button-padding);
+        justify-content: center;
+    }
+
+
     &:hover,
     &:focus-visible {
         --button-bg-color: #{$clr-accent};
@@ -75,7 +82,7 @@ $disabled-state-color: hsl(200, 11%, 84%);
     
     &__hover-indicator {
         background-color: var(--_indicator-bg-color);
-        padding: rem(18);
+        padding: var(--_button-padding);
     }
 
 
@@ -85,9 +92,18 @@ $disabled-state-color: hsl(200, 11%, 84%);
 }
 
 .hamburger-menu {
-    background: none;
+    --_burger-size: #{rem(30)};
+    
+    display: none;
+    background: url("/dist/img/icons/hamburger.svg") no-repeat center;
+
+    width: var(--_burger-size);
+    aspect-ratio: 1;
+
     border: none;
     cursor: pointer;
 
-    display: none;
+    &[aria-expanded=true] {
+        background: url("/dist/img/icons/close.svg") no-repeat center;;
+    }
 }

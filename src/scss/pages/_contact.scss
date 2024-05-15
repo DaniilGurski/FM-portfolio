@@ -1,0 +1,30 @@
+@use "../abstracts/" as *; 
+
+.contact-main {
+    /* TODO: make padding more accurate to the design */
+    padding-block: clamp(rem(80), 5vw, rem(96));
+    --gap: clamp(2rem, 3vw, #{rem(48)});
+
+
+    &__get-in-touch {
+        --margin-block: 0;
+        --padding-block: #{rem(48)};
+    }
+
+
+    &__contact {
+        --gap: #{rem(24)};
+
+        > .grid {
+            gap: inherit;
+        }
+    }
+
+
+    @include mq-min($large-screen-size) {
+        > * {
+            grid-template-columns: 1fr rem(635);
+        }
+    }
+
+}
