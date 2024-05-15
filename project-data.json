@@ -1,0 +1,68 @@
+
+{
+    "project-1": {
+        "banner": {
+            "desktop": "/dist/img/detail/desktop/image-fylo-hero.webp 1110w,/dist/img/detail/desktop/image-fylo-hero@2x.webp 2220w",
+            
+            "tablet": "/dist/img/detail/tablet/image-fylo-hero.webp 689w,/dist/img/detail/tablet/image-fylo-hero@2x.webp 1378w",
+
+            "mobile": "/dist/img/detail/mobile/image-fylo-hero.webp 311w,/dist/img/detail/mobile/image-fylo-hero@2x.webp 622w"
+        },
+
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+
+        "development": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis egestas odio vitae pellentesque consectetur. Ut sagittis justo eget efficitur consectetur.",
+
+        "static-previews": {
+            "desktop": "/dist/img/detail/desktop/image-fylo-preview-2.webp 635w,/dist/img/detail/desktop/image-fylo-preview-2@2x.webp 1270w",
+            
+            "tablet": "/dist/img/detail/tablet/image-fylo-preview-2.webp 689w,/dist/img/detail/tablet/image-fylo-preview-2@2x.webp 1378w",
+
+            "mobile": "/dist/img/detail/mobile/image-fylo-preview-2.webp 313w,/dist/img/detail/mobile/image-fylo-preview-2@2x.webp 626w"
+        }
+    },
+
+    "project-2": {
+        "banner": {
+            "desktop": "/dist/img/detail/desktop/image-manage-hero.webp 1110w,/dist/img/detail/desktop/image-manage-hero@2x.webp 2220w",
+            
+            "tablet": "/dist/img/detail/tablet/image-manage-hero.webp 689w,/dist/img/detail/tablet/image-manage-hero@2x.webp 1378w",
+
+            "mobile": "/dist/img/detail/mobile/image-manage-hero.webp 311w,/dist/img/detail/mobile/image-manage-hero@2x.webp 622w"
+        },
+
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+
+        "development": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis egestas odio vitae pellentesque consectetur. Ut sagittis justo eget efficitur consectetur.",
+
+        "static-previews": {
+            "desktop": "/dist/img/detail/desktop/image-manage-preview-2.webp 635w,/dist/img/detail/desktop/image-manage-preview-2@2x.webp 1270w",
+            
+            "tablet": "/dist/img/detail/tablet/image-manage-preview-2.webp 689w,/dist/img/detail/tablet/image-manage-preview-2@2x.webp 1378w",
+
+            "mobile": "/dist/img/detail/mobile/image-manage-preview-2.webp 313w,/dist/img/detail/mobile/image-manage-preview-2@2x.webp 626w"
+        }
+    },
+    
+    "project-3": {
+        "banner": {
+            "desktop": "/dist/img/detail/desktop/image-bookmark-hero.webp 1110w,/dist/img/detail/desktop/image-bookmark-hero@2x.webp 2220w",
+            
+            "tablet": "/dist/img/detail/tablet/image-bookmark-hero.webp 689w,/dist/img/detail/tablet/image-bookmark-hero@2x.webp 1378w",
+
+            "mobile": "/dist/img/detail/mobile/image-bookmark-hero.webp 311w,/dist/img/detail/mobile/image-bookmark-hero@2x.webp 622w"
+        },
+
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+
+        "development": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis egestas odio vitae pellentesque consectetur. Ut sagittis justo eget efficitur consectetur.",
+
+        "static-previews": {
+            "desktop": "/dist/img/detail/desktop/image-bookmark-preview-2.webp 635w,/dist/img/detail/desktop/image-bookmark-preview-2@2x.webp 1270w",
+            
+            "tablet": "/dist/img/detail/tablet/image-bookmark-preview-2.webp 689w,/dist/img/detail/tablet/image-bookmark-preview-2@2x.webp 1378w",
+
+            "mobile": "/dist/img/detail/mobile/image-bookmark-preview-2.webp 313w,/dist/img/detail/mobile/image-bookmark-preview-2@2x.webp 626w"
+        }
+    }
+}
