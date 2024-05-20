@@ -1,6 +1,7 @@
 const {src, dest, watch, series, parallel} = require("gulp");
 const fs = require("fs");
 const browserSync = require("browser-sync").create();
+const webpack       = require("webpack-stream");
 
 const scss        = require("gulp-sass")(require("sass"));
 const clean       = require("gulp-clean");
@@ -17,6 +18,20 @@ const imagemin    = require("gulp-imagemin");
 const srcPath     = "src/";
 const destPath    = "dist/";
 
+const webpackConfig = {
+    mode: "production",
+    entry: {
+        burger: "/src/js/burger.js",
+        loadProject: "/src/js/load-project.js",
+        openProject: "/src/js/open-project.js",
+        form: "/src/js/form.js",
+    },
+
+    output: {
+        filename: "[name].bundle.js",
+    },
+}
+
 
 function plumberNotify(Errortitle) {
     return {
@@ -30,13 +45,12 @@ function plumberNotify(Errortitle) {
 
 
 function buildScripts() {
-    return src(`${srcPath}js/**/*.js`, {sourcemaps: true})
-    .pipe(concat("main.min.js"))
-    .pipe(uglify())
+    return src(`${srcPath}js/**/*.js`) 
+        .pipe(plumber(plumberNotify("JS")))
+        .pipe(webpack(webpackConfig))
+        .pipe(dest(`${destPath}js/`))
 
-    .pipe(dest(`${destPath}js`))
-
-    .pipe(browserSync.stream())
+        .pipe(browserSync.stream())
 }
 
 

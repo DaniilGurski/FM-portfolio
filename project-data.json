@@ -1,68 +1,156 @@
 
 {
-    "project-1": {
-        "banner": {
-            "desktop": "/dist/img/detail/desktop/image-fylo-hero.webp 1110w,/dist/img/detail/desktop/image-fylo-hero@2x.webp 2220w",
+    "manage": {
+        "banner": [
+            "/dist/img/detail/desktop/image-manage-hero.webp 1110w,/dist/img/detail/desktop/image-manage-hero@2x.webp 2220w",
+
+            "/dist/img/detail/tablet/image-manage-hero.webp 689w,/dist/img/detail/tablet/image-manage-hero@2x.webp 1378w",
+
+            "/dist/img/detail/mobile/image-manage-hero.webp 311w,/dist/img/detail/mobile/image-manage-hero@2x.webp 622w",
+
+            "/dist/img/detail/mobile/image-manage-hero.webp"
+        ],
+
+        "description": "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the testimonial slider.",
+
+        "development": "This project was a front-end  challenge from Frontend Mentor. It's a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I've learned something new with each project, helping me to improve and adapt my style.",
+
+        "staticPreviews": [
+            [
+                "/dist/img/detail/desktop/image-manage-preview-1.webp 635w,/dist/img/detail/desktop/image-manage-preview-1@2x.webp 1270w",
             
-            "tablet": "/dist/img/detail/tablet/image-fylo-hero.webp 689w,/dist/img/detail/tablet/image-fylo-hero@2x.webp 1378w",
-
-            "mobile": "/dist/img/detail/mobile/image-fylo-hero.webp 311w,/dist/img/detail/mobile/image-fylo-hero@2x.webp 622w"
-        },
-
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-
-        "development": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis egestas odio vitae pellentesque consectetur. Ut sagittis justo eget efficitur consectetur.",
-
-        "static-previews": {
-            "desktop": "/dist/img/detail/desktop/image-fylo-preview-2.webp 635w,/dist/img/detail/desktop/image-fylo-preview-2@2x.webp 1270w",
-            
-            "tablet": "/dist/img/detail/tablet/image-fylo-preview-2.webp 689w,/dist/img/detail/tablet/image-fylo-preview-2@2x.webp 1378w",
-
-            "mobile": "/dist/img/detail/mobile/image-fylo-preview-2.webp 313w,/dist/img/detail/mobile/image-fylo-preview-2@2x.webp 626w"
-        }
-    },
-
-    "project-2": {
-        "banner": {
-            "desktop": "/dist/img/detail/desktop/image-manage-hero.webp 1110w,/dist/img/detail/desktop/image-manage-hero@2x.webp 2220w",
-            
-            "tablet": "/dist/img/detail/tablet/image-manage-hero.webp 689w,/dist/img/detail/tablet/image-manage-hero@2x.webp 1378w",
-
-            "mobile": "/dist/img/detail/mobile/image-manage-hero.webp 311w,/dist/img/detail/mobile/image-manage-hero@2x.webp 622w"
-        },
-
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-
-        "development": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis egestas odio vitae pellentesque consectetur. Ut sagittis justo eget efficitur consectetur.",
-
-        "static-previews": {
-            "desktop": "/dist/img/detail/desktop/image-manage-preview-2.webp 635w,/dist/img/detail/desktop/image-manage-preview-2@2x.webp 1270w",
-            
-            "tablet": "/dist/img/detail/tablet/image-manage-preview-2.webp 689w,/dist/img/detail/tablet/image-manage-preview-2@2x.webp 1378w",
-
-            "mobile": "/dist/img/detail/mobile/image-manage-preview-2.webp 313w,/dist/img/detail/mobile/image-manage-preview-2@2x.webp 626w"
-        }
-    },
+                "/dist/img/detail/tablet/image-manage-preview-1.webp 689w,/dist/img/detail/tablet/image-manage-preview-1@2x.webp 1378w",
     
-    "project-3": {
-        "banner": {
-            "desktop": "/dist/img/detail/desktop/image-bookmark-hero.webp 1110w,/dist/img/detail/desktop/image-bookmark-hero@2x.webp 2220w",
+                "/dist/img/detail/mobile/image-manage-preview-1.webp 313w,/dist/img/detail/mobile/image-manage-preview-1@2x.webp 626w",
+
+                "/dist/img/detail/mobile/image-manage-preview-1.webp"
+            ],
+
+            [
+                "/dist/img/detail/desktop/image-manage-preview-2.webp 635w,/dist/img/detail/desktop/image-manage-preview-2@2x.webp 1270w",
             
-            "tablet": "/dist/img/detail/tablet/image-bookmark-hero.webp 689w,/dist/img/detail/tablet/image-bookmark-hero@2x.webp 1378w",
+                "/dist/img/detail/tablet/image-manage-preview-2.webp 689w,/dist/img/detail/tablet/image-manage-preview-2@2x.webp 1378w",
+    
+                "/dist/img/detail/mobile/image-manage-preview-2.webp 313w,/dist/img/detail/mobile/image-manage-preview-2@2x.webp 626w",
 
-            "mobile": "/dist/img/detail/mobile/image-bookmark-hero.webp 311w,/dist/img/detail/mobile/image-bookmark-hero@2x.webp 622w"
-        },
+                "/dist/img/detail/mobile/image-manage-preview-2.webp"
+            ]
+        ]
+    },
 
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
 
-        "development": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis egestas odio vitae pellentesque consectetur. Ut sagittis justo eget efficitur consectetur.",
-
-        "static-previews": {
-            "desktop": "/dist/img/detail/desktop/image-bookmark-preview-2.webp 635w,/dist/img/detail/desktop/image-bookmark-preview-2@2x.webp 1270w",
+    "bookmark": {
+        "banner": [
+            "/dist/img/detail/desktop/image-bookmark-hero.webp 1110w,/dist/img/detail/desktop/image-bookmark-hero@2x.webp 2220w",
             
-            "tablet": "/dist/img/detail/tablet/image-bookmark-preview-2.webp 689w,/dist/img/detail/tablet/image-bookmark-preview-2@2x.webp 1378w",
+            "/dist/img/detail/tablet/image-bookmark-hero.webp 689w,/dist/img/detail/tablet/image-bookmark-hero@2x.webp 1378w",
 
-            "mobile": "/dist/img/detail/mobile/image-bookmark-preview-2.webp 313w,/dist/img/detail/mobile/image-bookmark-preview-2@2x.webp 626w"
-        }
+            "/dist/img/detail/mobile/image-bookmark-hero.webp 311w,/dist/img/detail/mobile/image-bookmark-hero@2x.webp 622w", 
+
+            "/dist/img/detail/mobile/image-bookmark-hero.webp"
+        ],
+
+        "description": "This project required me to build a fully responsive landing page to the designs provided. I used HTML5, along with CSS Grid and JavaScript for the areas that required interactivity, such as the features section.",
+
+        "development": "This project was a front-end  challenge from Frontend Mentor. It's a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I've learned something new with each project, helping me to improve and adapt my style.",
+
+        "staticPreviews": [
+            [
+                "/dist/img/detail/desktop/image-bookmark-preview-1.webp 635w,/dist/img/detail/desktop/image-bookmark-preview-1@2x.webp 1270w",
+            
+                "/dist/img/detail/tablet/image-bookmark-preview-1.webp 689w,/dist/img/detail/tablet/image-bookmark-preview-1@2x.webp 1378w",
+    
+                "/dist/img/detail/mobile/image-bookmark-preview-1.webp 313w,/dist/img/detail/mobile/image-bookmark-preview-1@2x.webp 626w",
+
+                "/dist/img/detail/mobile/image-bookmark-preview-1.webp"
+            ],
+
+            [
+                "/dist/img/detail/desktop/image-bookmark-preview-2.webp 635w,/dist/img/detail/desktop/image-bookmark-preview-2@2x.webp 1270w",
+            
+                "/dist/img/detail/tablet/image-bookmark-preview-2.webp 689w,/dist/img/detail/tablet/image-bookmark-preview-2@2x.webp 1378w",
+    
+                "/dist/img/detail/mobile/image-bookmark-preview-2.webp 313w,/dist/img/detail/mobile/image-bookmark-preview-2@2x.webp 626w",
+
+                "/dist/img/detail/mobile/image-bookmark-preview-2.webp"
+            ]
+        ]
+    },
+
+
+    "insure": {
+        "banner": [
+            "/dist/img/detail/desktop/image-insure-hero.webp 1110w,/dist/img/detail/desktop/image-insure-hero@2x.webp 2220w",
+            
+            "/dist/img/detail/tablet/image-insure-hero.webp 689w,/dist/img/detail/tablet/image-insure-hero@2x.webp 1378w",
+
+            "/dist/img/detail/mobile/image-insure-hero.webp 311w,/dist/img/detail/mobile/image-insure-hero@2x.webp 622w",
+
+            "/dist/img/detail/mobile/image-insure-hero.webp"
+        ],
+
+        "description": "This was a small project which mostly consisted of HTML and CSS. I built a fully-responsive landing page. The only JavaScript this project required was to enable the toggling of the mobile navigation.",
+
+        "development": "This project was a front-end  challenge from Frontend Mentor. It's a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I've learned something new with each project, helping me to improve and adapt my style.",
+
+        "staticPreviews": [
+            [
+                "/dist/img/detail/desktop/image-insure-preview-1.webp 635w,/dist/img/detail/desktop/image-insure-preview-1@2x.webp 1270w",
+            
+                "/dist/img/detail/tablet/image-insure-preview-1.webp 689w,/dist/img/detail/tablet/image-insure-preview-1@2x.webp 1378w",
+    
+                "/dist/img/detail/mobile/image-insure-preview-1.webp 313w,/dist/img/detail/mobile/image-insure-preview-1@2x.webp 626w",
+
+                "/dist/img/detail/mobile/image-insure-preview-1.webp"
+            ],
+
+            [
+                "/dist/img/detail/desktop/image-insure-preview-2.webp 635w,/dist/img/detail/desktop/image-insure-preview-2@2x.webp 1270w",
+            
+                "/dist/img/detail/tablet/image-insure-preview-2.webp 689w,/dist/img/detail/tablet/image-insure-preview-2@2x.webp 1378w",
+    
+                "/dist/img/detail/mobile/image-insure-preview-2.webp 313w,/dist/img/detail/mobile/image-insure-preview-2@2x.webp 626w",
+
+                "/dist/img/detail/mobile/image-insure-preview-2.webp"
+            ]
+        ]
+    },
+
+    "fylo": {
+        "banner": [
+            "/dist/img/detail/desktop/image-fylo-hero.webp 1110w,/dist/img/detail/desktop/image-fylo-hero@2x.webp 2220w",
+            
+            "/dist/img/detail/tablet/image-fylo-hero.webp 689w,/dist/img/detail/tablet/image-fylo-hero@2x.webp 1378w",
+
+            "/dist/img/detail/mobile/image-fylo-hero.webp 311w,/dist/img/detail/mobile/image-fylo-hero@2x.webp 622w",
+
+            "/dist/img/detail/mobile/image-fylo-hero.webp"
+        ],
+
+        "description": "This project was built in pure HTML and CSS. I had mobile and desktop designs to work to and built it so that it was fully-responsive. I took a mobile-first approach and used modern CSS like Flexbox and Grid for layout purposes.",
+
+        "development": "This project was a front-end  challenge from Frontend Mentor. It's a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I've learned something new with each project, helping me to improve and adapt my style.",
+
+        "staticPreviews": [
+            [
+                "/dist/img/detail/desktop/image-fylo-preview-1.webp 635w,/dist/img/detail/desktop/image-fylo-preview-1@2x.webp 1270w",
+            
+                "/dist/img/detail/tablet/image-fylo-preview-1.webp 689w,/dist/img/detail/tablet/image-fylo-preview-1@2x.webp 1378w",
+    
+                "/dist/img/detail/mobile/image-fylo-preview-1.webp 313w,/dist/img/detail/mobile/image-fylo-preview-1@2x.webp 626w",
+
+                "/dist/img/detail/mobile/image-fylo-preview-1.webp"
+            ],
+
+            [
+                "/dist/img/detail/desktop/image-fylo-preview-2.webp 635w,/dist/img/detail/desktop/image-fylo-preview-2@2x.webp 1270w",
+            
+                "/dist/img/detail/tablet/image-fylo-preview-2.webp 689w,/dist/img/detail/tablet/image-fylo-preview-2@2x.webp 1378w",
+    
+                "/dist/img/detail/mobile/image-fylo-preview-2.webp 313w,/dist/img/detail/mobile/image-fylo-preview-2@2x.webp 626w",
+
+                "/dist/img/detail/mobile/image-fylo-preview-2.webp"
+            ]
+        ]
     }
 }
