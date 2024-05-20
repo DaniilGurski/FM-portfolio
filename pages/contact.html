@@ -9,26 +9,31 @@
     <link rel="stylesheet" href="/dist/css/style.css">
 
     <!-- scripts -->
-    <script src="/dist/script/" defer></script>
+    <script src="/dist/js/burger.bundle.js" defer></script>
+    <script src="/dist/js/form.bundle.js" defer></script>
 </head>
 <body>
 
     <div class="container-grid">
-        <header class="primary-header | container-grid">
-            <img class="logo | header__logo" src="/dist/img/logo.svg" alt="logo">
-            <nav class="primary-header__navigation">
-                <ul class="nav-list primary-nav" id="primary-nav">
-                    <li class="nav-list__item"><a href="/index.html" class="nav-list__link">Home</a></li>
-                    <li class="nav-list__item"><a href="portfolio.html" class="nav-list__link">Portfolio</a></li>
-                    <li class="nav-list__item"><a href="#" class="nav-list__link">Contact Me</a></li>
-                </ul>
-            </nav>
-            <button class="hamburger-menu" aria-expanded="false" aria-controls="primary-nav">
-                <span class="visually-hidden">Menu</span>
-                <img src="/dist/img/icons/hamburger.svg" alt="">
-            </button>
+        <header class="primary-header">
+            
+            <div class="primary-header__content">
+                <a href="/index.html" aria-label="go to home page">
+                    <img class="logo | header__logo" src="/dist/img/logo.svg" alt="logo">
+                </a>
+                <nav class="primary-header__navigation">
+                    <ul class="nav-list primary-nav" id="primary-nav">
+                        <li class="nav-list__item"><a href="/index.html" class="nav-list__link">Home</a></li>
+                        <li class="nav-list__item"><a href="portfolio.html" class="nav-list__link">Portfolio</a></li>
+                        <li class="nav-list__item"><a href="contact.html" class="nav-list__link">Contact Me</a></li>
+                    </ul>
+                </nav>
+                
+                <button class="hamburger-menu" aria-expanded="false" aria-controls="primary-nav" id="burger-menu">
+                    <span class="visually-hidden">Menu</span>
+                </button>
+            </div>
         </header>
-
 
         <main class="contact-main | grid">
             <section class="border-block | contact-main__get-in-touch">
@@ -41,17 +46,17 @@
 
                     <ul class="social-media">
                         <li class="social-media__item">
-                            <a href="#" class="social-media__link">
+                            <a href="#" class="social-media__link" aria-label="github">
                                 <img src="/dist/img/icons/github.svg" alt="github">
                             </a>
                         </li>
                         <li class="social-media__item">
-                            <a href="#" class="social-media__link">
+                            <a href="#" class="social-media__link" aria-label="twitter">
                                 <img src="/dist/img/icons/twitter.svg" alt="twitter">
                             </a>
                         </li>
                         <li class="social-media__item">
-                            <a href="#" class="social-media__link">
+                            <a href="#" class="social-media__link" aria-label="">
                                 <img src="/dist/img/icons/linkedin.svg" alt="linkedin">
                             </a>
                         </li>
@@ -61,17 +66,17 @@
 
             <seciton class="contact-main__contact | grid">
                 <h2>Contact Me</h2>
-                <form class="form | grid">
-                    <label class="input-pair text-field"> 
+                <form class="form | grid" id="form">
+                    <label class="input-pair text-field" aria-live="polite"> 
                         Name
-                        <input class="input-field text-field__input" type="text" placeholder="John Doe">
+                        <input class="input-field text-field__input" type="text" placeholder="John Doe" id="name-input" aria-required="true">
                     </label>
-                    <label class="input-pair text-field"> 
+                    <label class="input-pair text-field" aria-live="polite"> 
                         Email Address
-                        <input class="input-field text-field__input" type="text" placeholder="John Doe">
+                        <input class="input-field text-field__input" type="text" placeholder="email@example.com" id="email-input" aria-required="true">
                     </label>
-                    <label class="input-pair text-area"> Message
-                        <textarea class="input-field text-area__input" rows="4" placeholder="How can I help you ?"></textarea>
+                    <label class="input-pair text-area" aria-live="polite"> Message
+                        <textarea class="input-field text-area__input" rows="4" placeholder="How can I help you ?" id="message-input" aria-required="true"></textarea>
                     </label>
 
                     <button class="button button--no-icon "type="submit">
@@ -88,23 +93,23 @@
                 <nav class="footer__navigation">
                     <ul class="footer__nav-item-group">
                         <ul class="nav-list | footer__nav-list" id="footer-nav">
-                            <li class="nav-list__item"><a href="#" class="nav-list__link">Home</a></li>
-                            <li class="nav-list__item"><a href="#" class="nav-list__link">Portfolio</a></li>
-                            <li class="nav-list__item"><a href="#" class="nav-list__link">Contact Me</a></li>
+                            <li class="nav-list__item"><a href="/index.html" class="nav-list__link">Home</a></li>
+                            <li class="nav-list__item"><a href="portfolio.html" class="nav-list__link">Portfolio</a></li>
+                            <li class="nav-list__item"><a href="contact.html" class="nav-list__link">Contact Me</a></li>
                         </ul>
                         <ul class="social-media social-media--light">
                             <li class="social-media__item">
-                                <a href="#" class="social-media__link">
+                                <a href="#" class="social-media__link" aria-label="github">
                                     <img src="/dist/img/icons/github.svg" alt="github">
                                 </a>
                             </li>
                             <li class="social-media__item">
-                                <a href="#" class="social-media__link">
+                                <a href="#" class="social-media__link" aria-label="twitter">
                                     <img src="/dist/img/icons/twitter.svg" alt="twitter">
                                 </a>
                             </li>
                             <li class="social-media__item">
-                                <a href="#" class="social-media__link">
+                                <a href="#" class="social-media__link" aria-label="linkedin">
                                     <img src="/dist/img/icons/linkedin.svg" alt="linkedin">
                                 </a>
                             </li>

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/dist/css/style.css">
 
     <!-- scripts -->
-    <script src="/dist/js/main.min.js" defer></script>
+    <script src="/dist/js/burger.bundle.js" defer></script>
     
     <title> Home </title>
 </head>
@@ -16,20 +16,24 @@
     <a href="#" class="skip-to-main"></a>
 
     <div class="container-grid">
-        <header class="primary-header | container-grid">
-            <img class="logo | header__logo" src="/dist/img/logo.svg" alt="logo">
-
-            <nav class="primary-header__navigation">
-                <ul class="nav-list primary-nav" id="primary-nav">
-                    <li class="nav-list__item"><a href="#" class="nav-list__link">Home</a></li>
-                    <li class="nav-list__item"><a href="pages/portfolio.html" class="nav-list__link">Portfolio</a></li>
-                    <li class="nav-list__item"><a href="pages/contact.html" class="nav-list__link">Contact Me</a></li>
-                </ul>
-            </nav>
+        <header class="primary-header">
             
-            <button class="hamburger-menu" aria-expanded="false" aria-controls="primary-nav" id="burger-menu">
-                <span class="visually-hidden">Menu</span>
-            </button>
+            <div class="primary-header__content">
+                <a href="index.html" aria-label="go to home page">
+                    <img class="logo | header__logo" src="/dist/img/logo.svg" alt="logo">
+                </a>
+                <nav class="primary-header__navigation">
+                    <ul class="nav-list primary-nav" id="primary-nav">
+                        <li class="nav-list__item"><a href="#" class="nav-list__link">Home</a></li>
+                        <li class="nav-list__item"><a href="pages/portfolio.html" class="nav-list__link">Portfolio</a></li>
+                        <li class="nav-list__item"><a href="pages/contact.html" class="nav-list__link">Contact Me</a></li>
+                    </ul>
+                </nav>
+                
+                <button class="hamburger-menu" aria-expanded="false" aria-controls="primary-nav" id="burger-menu">
+                    <span class="visually-hidden">Menu</span>
+                </button>
+            </div>
         </header>
         <main class="home-main">
             <section class="hero">
@@ -56,15 +60,15 @@
                     <h1>
                         Hey, I`m Alex Spencer and I love building beautiful websites
                     </h1>
-                    <button class="button">
+                    <a class="button" href="#about">
                         <div class="button__hover-indicator">
                             <img class="button__hover-icon" src="dist/img/icons/down-arrows.svg" alt="" aria-hidden="true">
                         </div>
                         <span class="button__text">About me</span>
-                    </button>
+                    </a>
                 </div>
             </section>
-            <article class="home-main__about-me">
+            <article class="home-main__about-me" id="about">
                 <picture class="home-main__profile-picture">
                     <!-- Desktop -->
                     <source media="(min-width: 79.625em)"
@@ -100,7 +104,7 @@
                 Interested in doing a project together?
             </span>
             <span class="contact-author__leading-line"> </span>
-            <a class="button button--secondary" href="#">
+            <a class="button button--secondary" href="pages/contact.html">
                 Contact Me
             </a>
         </div>
@@ -112,22 +116,22 @@
                     <ul class="footer__nav-item-group">
                         <ul class="nav-list | footer__nav-list" id="footer-nav">
                             <li class="nav-list__item"><a href="#" class="nav-list__link">Home</a></li>
-                            <li class="nav-list__item"><a href="#" class="nav-list__link">Portfolio</a></li>
-                            <li class="nav-list__item"><a href="#" class="nav-list__link">Contact Me</a></li>
+                            <li class="nav-list__item"><a href="/pages/portfolio.html" class="nav-list__link">Portfolio</a></li>
+                            <li class="nav-list__item"><a href="/pages/contact.html" class="nav-list__link">Contact Me</a></li>
                         </ul>
                         <ul class="social-media social-media--light">
                             <li class="social-media__item">
-                                <a href="#" class="social-media__link">
+                                <a href="#" class="social-media__link" aria-label="github">
                                     <img src="/dist/img/icons/github.svg" alt="github">
                                 </a>
                             </li>
                             <li class="social-media__item">
-                                <a href="#" class="social-media__link">
+                                <a href="#" class="social-media__link" aria-label="twitter">
                                     <img src="/dist/img/icons/twitter.svg" alt="twitter">
                                 </a>
                             </li>
                             <li class="social-media__item">
-                                <a href="#" class="social-media__link">
+                                <a href="#" class="social-media__link" aria-label="linkedin">
                                     <img src="/dist/img/icons/linkedin.svg" alt="linkedin">
                                 </a>
                             </li>

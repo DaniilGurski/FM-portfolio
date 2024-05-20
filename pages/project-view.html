@@ -9,29 +9,34 @@
         <link rel="stylesheet" href="/dist/css/style.css">
 
         <!-- scripts -->
-        <script src="/dist/script/" defer></script>
+        <script src="/dist/js/burger.bundle.js" defer></script>
+        <script src="/dist/js/loadProject.bundle.js" defer></script>
     </head>
 <body>
     <div class="container-grid">
-        <header class="primary-header | container-grid">
-            <img class="logo | header__logo" src="/dist/img/logo.svg" alt="logo">
-
-            <nav class="primary-header__navigation">
-                <ul class="nav-list primary-nav" id="primary-nav">
-                    <li class="nav-list__item"><a href="/index.html" class="nav-list__link">Home</a></li>
-                    <li class="nav-list__item"><a href="pages/portfolio.html" class="nav-list__link">Portfolio</a></li>
-                    <li class="nav-list__item"><a href="pages/contact.html" class="nav-list__link">Contact Me</a></li>
-                </ul>
-            </nav>
+        <header class="primary-header">
             
-            <button class="hamburger-menu" aria-expanded="false" aria-controls="primary-nav" id="burger-menu">
-                <span class="visually-hidden">Menu</span>
-            </button>
+            <div class="primary-header__content">
+                <a href="/index.html" aria-label="go to home page">
+                    <img class="logo | header__logo" src="/dist/img/logo.svg" alt="logo">
+                </a>
+                <nav class="primary-header__navigation">
+                    <ul class="nav-list primary-nav" id="primary-nav">
+                        <li class="nav-list__item"><a href="/index.html" class="nav-list__link">Home</a></li>
+                        <li class="nav-list__item"><a href="portfolio.html" class="nav-list__link">Portfolio</a></li>
+                        <li class="nav-list__item"><a href="contact.html" class="nav-list__link">Contact Me</a></li>
+                    </ul>
+                </nav>
+                
+                <button class="hamburger-menu" aria-expanded="false" aria-controls="primary-nav" id="burger-menu">
+                    <span class="visually-hidden">Menu</span>
+                </button>
+            </div>
         </header>
 
         <main class="project-main | grid">
-            <header class="project-main__header" id="project-banner">
-                <picture class="project-main__header-preview">
+            <header class="project-main__header">
+                <picture class="project-main__header-preview" id="project-banner">
                     <!-- Desktop -->
                     <source media="(min-width: 79.625em)"
                             srcset="/dist/img/detail/desktop/image-manage-hero.webp 1110w,
@@ -75,7 +80,7 @@
                 <div class="grid">
                     <div class="about-project__background | grid">
                         <h3>Project Background</h3>
-                        <p id="project-background">
+                        <p id="project-development">
                             This project was a front-end  challenge from <a class="text-underline" href="https://www.frontendmentor.io/home" target="_blank">Frontend Mentor</a>. It`s a platform that enables you to practice building websites to a design and project brief. Each challenge includes mobile and desktop designs to show how the website should look at different screen sizes. Creating these projects has helped me refine my workflow and solve real-world coding problems. I`ve learned something new with each project, helping me to improve and adapt my style.
                         </p>
                     </div>
@@ -132,20 +137,23 @@
                 </div>
             </article>
 
-            <section class="switch-project">
+            <section class="switch-project" id="project-switcher">
                 <div class="switch-project__section" data-switch-to="prev">
-                    <button class="switch-project__button">
-                        <img src="/dist/img/icons/arrow-left.svg" alt="">
-                    </button>
-
-                    <h3 class="switch-project__project-name" data-undertext="Previous Project" id="prev-project">Fylo</h3>
+                    <div data-interactable>
+                        <button class="switch-project__button" aria-label="switch to previous project">
+                            <img src="/dist/img/icons/arrow-left.svg" alt="">
+                        </button>
+                        <h3 class="switch-project__project-name" data-undertext="Previous Project" id="prev-project">Fylo</h3>
+                    </div>
 
                 </div>
                 <div class="switch-project__section" data-switch-to="next">
-                    <button class="switch-project__button">
-                        <img src="/dist/img/icons/arrow-right.svg" alt="">
-                    </button>
-                    <h3 class="switch-project__project-name" data-undertext="Next Project" id=next-project>Bookmark</h3>
+                    <div data-interactable>
+                        <button class="switch-project__button" aria-label="switch to next project">
+                            <img src="/dist/img/icons/arrow-right.svg" alt="">
+                        </button>
+                        <h3 class="switch-project__project-name" data-undertext="Next Project" id=next-project>Bookmark</h3>
+                    </div>
                 </div>
             </section>
 
@@ -156,7 +164,7 @@
                 Interested in doing a project together?
             </span>
             <span class="contact-author__leading-line"> </span>
-            <a class="button button--secondary" href="#">
+            <a class="button button--secondary" href="contact.html">
                 Contact Me
             </a>
         </div>
@@ -167,23 +175,23 @@
                 <nav class="footer__navigation">
                     <ul class="footer__nav-item-group">
                         <ul class="nav-list | footer__nav-list" id="footer-nav">
-                            <li class="nav-list__item"><a href="#" class="nav-list__link">Home</a></li>
-                            <li class="nav-list__item"><a href="#" class="nav-list__link">Portfolio</a></li>
-                            <li class="nav-list__item"><a href="#" class="nav-list__link">Contact Me</a></li>
+                            <li class="nav-list__item"><a href="/index.html" class="nav-list__link">Home</a></li>
+                            <li class="nav-list__item"><a href="portfolio.html" class="nav-list__link">Portfolio</a></li>
+                            <li class="nav-list__item"><a href="contact.html" class="nav-list__link">Contact Me</a></li>
                         </ul>
                         <ul class="social-media social-media--light">
                             <li class="social-media__item">
-                                <a href="#" class="social-media__link">
+                                <a href="#" class="social-media__link" aria-label="github">
                                     <img src="/dist/img/icons/github.svg" alt="github">
                                 </a>
                             </li>
                             <li class="social-media__item">
-                                <a href="#" class="social-media__link">
+                                <a href="#" class="social-media__link" aria-label="twitter">
                                     <img src="/dist/img/icons/twitter.svg" alt="twitter">
                                 </a>
                             </li>
                             <li class="social-media__item">
-                                <a href="#" class="social-media__link">
+                                <a href="#" class="social-media__link" aria-label="linkedin">
                                     <img src="/dist/img/icons/linkedin.svg" alt="linkedin">
                                 </a>
                             </li>
