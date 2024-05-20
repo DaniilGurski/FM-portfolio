@@ -74,14 +74,14 @@ p {
 
 /* container */
 .container {
-  width: min(90%, 100ch);
+  width: min(90%, 110ch);
   padding-inline: 2rem;
   margin-inline: auto;
 }
 
 .container-grid {
   display: grid;
-  grid-template-columns: [full-width-start] minmax(2rem, 1fr) [breakout-start] minmax(0, 10ch) [content-start] min(100% - 4rem, 100ch) [content-end] minmax(0, 10ch) [breakout-end] minmax(2rem, 1fr) [full-width-end];
+  grid-template-columns: [full-width-start] minmax(2rem, 1fr) [breakout-start] minmax(0, 5ch) [content-start] min(100% - 4rem, 110ch) [content-end] minmax(0, 5ch) [breakout-end] minmax(2rem, 1fr) [full-width-end];
   padding-top: clamp(5rem, 8vw, 7.5rem);
 }
 .container-grid > * {
@@ -201,6 +201,11 @@ p {
 }
 
 /* general */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
+}
+
 body {
   font-family: "PublicSans", "sans-serif";
   background-color: var(--clr-secondary-100);
@@ -299,7 +304,7 @@ body {
   --gap: 2.5rem;
 }
 .about-project__border-block {
-  display: grid;
+  --gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(21.875em, 1fr));
   margin-block: 0;
 }
@@ -335,26 +340,27 @@ body {
   grid-template-columns: 1fr 1fr;
 }
 .switch-project__button {
+  height: 100%;
   background: none;
   border: none;
-  cursor: pointer;
 }
 .switch-project__section {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
   padding-block: 1.5rem;
   border-block: 1px solid var(--clr-secondary-400);
+}
+.switch-project__section > [data-interactable] {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  cursor: pointer;
+  user-select: none;
 }
 .switch-project__section[data-switch-to=prev] {
   border-right: 1px solid var(--clr-secondary-400);
 }
 .switch-project__section[data-switch-to=next] {
-  align-items: end;
-  text-align: right;
-}
-.switch-project__section--hide-content > * {
-  visibility: hidden;
+  justify-content: end;
 }
 .switch-project__project-name::after {
   content: attr(data-undertext);
@@ -364,10 +370,8 @@ body {
   font-size: var(--fs-300);
 }
 @media (min-width: 48em) {
-  .switch-project__section {
+  .switch-project__section > [data-interactable] {
     flex-direction: row;
-  }
-  .switch-project__section[data-switch-to=next] {
     align-items: center;
     justify-content: end;
   }
@@ -413,6 +417,7 @@ body {
   letter-spacing: 0.125em;
   text-transform: uppercase;
   text-wrap: nowrap;
+  text-align: center;
   /* make hover icon white if button is hovered or disabled */
 }
 .button--secondary {
@@ -473,7 +478,7 @@ body {
   /* add message benith invalid text fields inside a form */
 }
 .form label:has([data-invalid])::after {
-  content: "invalid";
+  content: attr(data-error);
   font-style: italic;
   color: var(--clr-secondary-500);
 }
@@ -547,14 +552,17 @@ h3 {
 .primary-header {
   position: fixed;
   top: 0;
-  left: 50%;
-  width: min(100ch, 100% - 4rem);
-  padding-block: 2rem;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  background-color: var(--clr-secondary-100);
+}
+.primary-header__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--clr-secondary-100);
+  width: min(110ch, 100% - 4rem);
+  margin-inline: auto;
+  padding-block: 2rem;
 }
 @media (max-width: 36.5625em) {
   .primary-header .primary-nav {

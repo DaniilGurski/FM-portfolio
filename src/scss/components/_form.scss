@@ -4,7 +4,7 @@
 .form {
     /* add message benith invalid text fields inside a form */
     label:has([data-invalid])::after {
-        content: "invalid";
+        content: attr(data-error);
         font-style: italic;
         color: $clr-error;
     }   

@@ -18,7 +18,7 @@
 
 
     &__border-block {
-        display: grid;
+        --gap: #{rem(24)};
         grid-template-columns: repeat(auto-fit, minmax(em(350), 1fr));
         margin-block: 0;
     }
@@ -64,31 +64,34 @@
     // padding-top: clamp(rem(65), 10vw, rem(80));;
 
     &__button {
+        height: 100%;
         background: none;
         border: none;
-        cursor: pointer;
     }
-
+    
     &__section {
         display: flex;
-        flex-direction: column;
-
-        gap: 1rem;
-        
         padding-block: rem(24);
         border-block: 1px solid $clr-light-gray;
+        
+        & > [data-interactable] {
+
+            display: flex;
+            flex-direction: column;
+    
+            gap: 1rem;
+            cursor: pointer;
+            user-select: none;
+        }
+        
 
         &[data-switch-to=prev] {
             border-right: 1px solid $clr-light-gray;
         }
+
         
         &[data-switch-to=next] {
-            align-items: end;
-            text-align: right;
-        }
-
-        &--hide-content > * {
-            visibility: hidden;
+            justify-content: end;
         }
     }
 
@@ -103,12 +106,13 @@
 
     @include mq-min($medium-screen-size) {
         &__section {
-            flex-direction: row;
-
-            &[data-switch-to=next] {
+            & > [data-interactable] {
+                flex-direction: row;
                 align-items: center;
                 justify-content: end;
+            }
 
+            &[data-switch-to=next] {
                 .switch-project__button {
                     order: 1;
                 }

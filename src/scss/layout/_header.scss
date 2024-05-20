@@ -5,15 +5,27 @@
 .primary-header {
     position: fixed;
     top: 0;
-    left: 50%;
-    width: min($container-max-width, (100% - ($container-padding-inline * 2)));
-    padding-block: 2rem;
+    left: 0;
+    right: 0;
 
-    transform: translateX(-50%);
+    &__content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: min($container-max-width, (100% - ($container-padding-inline * 2)));
+
+        margin-inline: auto;
+        padding-block: 2rem;
+    }
+    // left: 50%;
+    // width: min($container-max-width, (100% - ($container-padding-inline * 2)));
+
+    // transform: translateX(-50%);
     
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
 
     background-color: $clr-white;
 
@@ -39,9 +51,6 @@
         }
 
 
-
-
-        
         .hamburger-menu {
             display: block;
         }
