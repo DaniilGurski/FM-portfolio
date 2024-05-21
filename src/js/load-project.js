@@ -55,6 +55,7 @@ function switchProjectView(event) {
     if (eventTarget.closest("[data-interactable]")) {
         localStorage.setItem("projectViewKey", container.dataset.project);
         projectKey = localStorage.getItem("projectViewKey");
+        capitalizedProjectKey = utilFunctions.capitalize(projectKey);
 
         setUpProjectResources();
     }
