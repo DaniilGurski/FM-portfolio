@@ -2,7 +2,7 @@
 
 /* portfolio page related styling */
 .portfolio-main {
-    @include grid(rem(115));
+    // @include grid(rem(115));
     
     &__project-list {
         @include list($row: "false", $item-gap: 1rem, $off-markers: "true");

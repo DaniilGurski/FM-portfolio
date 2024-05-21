@@ -2,7 +2,11 @@
 
 /* MAIN */
 .home-main {
-    @include grid(rem(115));
+
+    > .grid {
+        @include grid(rem(115));
+    }
+    
     &__profile-picture {
         img {
             width: 100%;
