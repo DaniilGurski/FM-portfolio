@@ -13,7 +13,7 @@
     <title> Home </title>
 </head>
 <body>
-    <a href="#" class="skip-to-main"></a>
+    <!-- <a href="#" class="skip-to-main"></a> -->
 
     <div class="container-grid">
         <header class="primary-header">
@@ -36,6 +36,7 @@
             </div>
         </header>
         <main class="home-main">
+            
             <section class="hero">
                 <picture class="hero__picture">
                     <!-- Desktop -->
@@ -50,11 +51,12 @@
                     <!-- Mobile -->
                     <source media="(min-width: 36.5625em)"
                             srcset="/dist/img/homepage/mobile/image-homepage-hero.webp 311w,
-                                    /dist/img/homepage/mobile/image-homepage-hero@2x.webp 622w">
+                                    /dist/img/homepage/mobile/image-homepage-hero@2x.webp 622w" >
         
                     <img src="/dist/img/homepage/mobile/image-homepage-hero.webp"
                       srcset="/dist/img/homepage/mobile/image-homepage-hero.webp 311w,
-                              /dist/img/homepage/mobile/image-homepage-hero@2x.webp 622w">
+                              /dist/img/homepage/mobile/image-homepage-hero@2x.webp 622w"
+                      alt="">
                 </picture>
                 <div class="hero__main">
                     <h1>
@@ -85,7 +87,7 @@
 
                     <img src="/dist/img/homepage/mobile/image-homepage-profile.webp"
                       srcset="/dist/img/homepage/mobile/image-homepage-profile.webp 311w,
-                              /dist/img/homepage/mobile/image-homepage-profile@2x.webp 622w">
+                              /dist/img/homepage/mobile/image-homepage-profile@2x.webp 622w" alt="">
                 </picture>
                 <div class="border-block">
                     <h2> About me </h2>
@@ -99,7 +101,7 @@
             </article>
         </main>
 
-        <div class="contact-author">
+        <div class="contact-author" aria-label="contact section">
             <span class="contact-author__cta-lead">
                 Interested in doing a project together?
             </span>
@@ -113,7 +115,7 @@
             <div class="footer__content">
                 <img src="dist/img/logo.svg" alt="logo">
                 <nav class="footer__navigation">
-                    <ul class="footer__nav-item-group">
+                    <div class="footer__nav-item-group">
                         <ul class="nav-list | footer__nav-list" id="footer-nav">
                             <li class="nav-list__item"><a href="#" class="nav-list__link">Home</a></li>
                             <li class="nav-list__item"><a href="/pages/portfolio.html" class="nav-list__link">Portfolio</a></li>
@@ -136,7 +138,7 @@
                                 </a>
                             </li>
                         </ul>
-                    </ul>
+                    </div>
                 </nav>
             </div>
         </footer>
