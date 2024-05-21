@@ -7,6 +7,7 @@ const projectDev         = document.querySelector("#project-development");
 const projectPreviewList = document.querySelector("#project-previews");
 const projectSwitcher    = document.querySelector("#project-switcher");
 
+let projectData = null;
 let projectKey         = localStorage.getItem("projectViewKey");
 let capitalizedProjectKey = utilFunctions.capitalize(projectKey);
 
@@ -62,14 +63,18 @@ function switchProjectView(event) {
 
 
 async function loadProjectData() {
-    const res = await fetch("/project-data.json");
-
-    if (!res.ok) {
-        throw new Error("error fetching data")
+    if (projectData === null) {
+        const res = await fetch("/project-data.json");
+    
+        if (!res.ok) {
+            throw new Error("error fetching data")
+        }
+    
+        const data = await res.json();
+        projectData = data;
     }
 
-    const data = await res.json();
-    return data
+    return projectData;
 }
 
 
