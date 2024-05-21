@@ -1,7 +1,6 @@
 @use "../abstracts/" as *; 
 
 .contact-main {
-    /* TODO: make padding more accurate to the design */
     padding-block: clamp(rem(80), 5vw, rem(96));
     --gap: clamp(2rem, 3vw, #{rem(48)});
 

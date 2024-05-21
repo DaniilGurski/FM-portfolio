@@ -237,10 +237,6 @@ body {
 }
 
 /* portfolio page related styling */
-.portfolio-main {
-  display: grid;
-  row-gap: var(--gap, 7.1875rem);
-}
 .portfolio-main__project-list {
   margin: 0;
   padding: 0;
@@ -293,9 +289,12 @@ body {
 }
 
 .project-main {
-  --gap: 4rem;
   padding-top: clamp(2.5rem, 5vw, 5.875rem);
 }
+.project-main > .grid {
+  --gap: 4rem;
+}
+
 .about-project {
   display: grid;
   row-gap: var(--gap, 2.5rem);
@@ -381,7 +380,6 @@ body {
 }
 
 .contact-main {
-  /* TODO: make padding more accurate to the design */
   padding-block: clamp(5rem, 5vw, 6rem);
   --gap: clamp(2rem, 3vw, 3rem);
 }
@@ -631,7 +629,7 @@ h3 {
 }
 
 /* MAIN */
-.home-main {
+.home-main > .grid {
   display: grid;
   row-gap: var(--gap, 7.1875rem);
 }

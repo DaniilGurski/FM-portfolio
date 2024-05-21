@@ -1,11 +1,11 @@
 @use "../abstracts/" as *;
 
 .project-main {
-    --gap: #{rem(64)};
+    > .grid {
+        --gap: #{rem(64)};
+    }
     padding-top: clamp(rem(40), 5vw, rem(94));
 
-    @include mq-min($medium-screen-size) {
-    }
 }
 
 
