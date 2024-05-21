@@ -14,9 +14,7 @@ This is a solution to the [Minimalist portfolio website challenge on Frontend Me
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -33,15 +31,10 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](/screenshots/home.jpg)
+![](/screenshots/portfolio.jpg)
+![](/screenshots/contact.jpg)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
@@ -53,21 +46,15 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 ### Built with
 
 - Semantic HTML5 markup
+- SCSS
 - CSS custom properties
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [Gulp](https://gulpjs.com/) - Task runner, scss compiler
 
 ### What I learned
-
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
+In this project, it was necessary to frequently load images in different resolutions. I did it with the help of the picture tag and special markings for the browser that let it know when to load a larger image. It was a bit new thing to do for me. I wonder if there's a way to make it faster and more afficient ?
 
 ```html
 <!-- Loading different images for screens with different pixel density --> 
@@ -81,48 +68,44 @@ To see how you can add code snippets, see below:
                     /dist/img/homepage/tablet/image-homepage-hero@2x.jpg 1376w">
 </picture>
 ```
+
+The most difficult thing was to do the overlap effect on the first page, in the hero section (_main.scss). I also used a different type of container for this project. Grid based container. I followed Kevin Powell's video to make it and I can see it being used in my future projects !
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+/* grid based container */
+.container-grid {
+    display: grid;
+    grid-template-columns: 
+    [full-width-start] minmax($container-padding-inline, 1fr)
+    [breakout-start]   minmax(0, $breakout-size) 
+    [content-start]    min(100% - ($container-padding-inline * 2), $container-max-width) 
+    [content-end]      minmax(0, $breakout-size) 
+    [breakout-end]     minmax($container-padding-inline, 1fr)
+    [full-width-end];
+ 
+    > * {
+        grid-column: content;
+    }
+
+    padding-top: clamp(rem(80), 8vw, rem(120));
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+I made up one more js task besides form validation. In order not to create a couple of pages with the same layout but with slightly different content, I decided to load the necessary information through a json file in just one html file. I'm probably most satisfied with this in terms of js. Im not sure if I did it the most clean way, so feel free to share some tips !
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
+I still need more organization to my JS and use more of it's features before moving to any frameworks. 
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Kevin Powell](https://www.youtube.com/watch?v=2QYpkrX2N48) - About srcset, loading suitable images on different screen sizes. 
+- [Kevin Powell](https://www.youtube.com/watch?v=c13gpBrnGEw) - About grid based container
+- [Kevin Powell](https://www.youtube.com/watch?v=CVKbe4RaUZQ) - Overlapping grid
 
-https://www.youtube.com/watch?v=2QYpkrX2N48 - srcset 
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
-
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Frontend Mentor - [@DaniilGurski](https://www.frontendmentor.io/profile/DaniilGurski)
 
 
